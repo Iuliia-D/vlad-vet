@@ -5,6 +5,7 @@ import About from "./components/pages/About";
 import Cases from "./components/pages/Cases";
 import Publication from "./components/pages/Publication";
 import Contacts from "./components/pages/Contacts";
+import Footer from "./components/UI/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="publication" element={<Publication />} />
         <Route path="contacts" element={<Contacts />} />
       </Routes>
+      <Footer />
     </>
   );
 }

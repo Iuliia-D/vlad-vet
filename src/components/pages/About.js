@@ -1,5 +1,4 @@
 import Header from "../UI/Header";
-
 import classes from "./About.module.scss";
 
 const Menu = () => {

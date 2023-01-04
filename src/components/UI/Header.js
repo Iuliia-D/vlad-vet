@@ -1,20 +1,24 @@
 // import { useState } from "react";
 import { menuActions } from "../../store/menuSlice";
+import { headerActions } from "../../store/headerSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
+import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import { ReactComponent as MenuBtn } from "../../assets/icons/menu-btn.svg";
+import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-black.svg";
 
 import Menu from "./Menu";
-
 import classes from "./Header.module.scss";
 
 const Header = () => {
   const dispatch = useDispatch();
   const showMenu = useSelector((state) => state.menu.menuIsActive);
-  // const [menuActive, setMenuActive] = useState(false);
+  const headerColorWhite = useSelector((state) => state.header.colorWhite);
+
   const menuOpenHandler = () => {
     dispatch(menuActions.openMenu());
+    dispatch(headerActions.changeColorToBlack());
   };
   return (
     <>
@@ -22,11 +26,19 @@ const Header = () => {
 
       <div className={classes.header_menu}>
         <div>
-          <Pasient />
-          <h1>Владислав Бочкарев</h1>
+          {headerColorWhite ? <Pasient /> : <PasientBlack />}
+          <h1
+            className={
+              headerColorWhite
+                ? `${classes.white_text}`
+                : `${classes.black_text}`
+            }
+          >
+            Владислав Бочкарев
+          </h1>
         </div>
         <button onClick={menuOpenHandler}>
-          <MenuBtn />
+          {headerColorWhite ? <MenuBtn /> : <MenuBtnBlack />}
         </button>
       </div>
     </>

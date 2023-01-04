@@ -20,12 +20,14 @@
     background-image: url("../../assets/img/main-photo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 137px;
-    height: 183px;
+    // width: 137px;
+    // height: 183px;
+    width: 50%;
+    height: 250px;
   }
   .main_about__title {
     width: 50%;
-    padding: 13px 10px 10px 30px;
+    padding: 30px 10px 10px 30px;
     h2 {
       font-size: var(--font-size);
       font-weight: 700;
@@ -35,7 +37,7 @@
 .main__descr {
   margin-top: 10px;
   padding: 20px;
-  width: 70%;
+  // width: 70%;
 
   p {
     font-size: var(--font-size);

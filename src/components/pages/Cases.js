@@ -1,9 +1,9 @@
-import Header from "../UI/Header";
+import HeaderBlack from "../UI/HeaderBlack";
 
 const Cases = () => {
   return (
     <>
-      <Header />
+      <HeaderBlack />
       <h1>Клинические случаи</h1>
     </>
   );

@@ -11,9 +11,13 @@
     font-size: var(--font-size);
     letter-spacing: 0.04em;
     margin: 0 0 0 9px;
+  }
+  .black_text {
+    color: var(--text-color);
+  }
+  .white_text {
     color: var(--white-text-color);
   }
-
   button {
     padding-top: 3px;
   }

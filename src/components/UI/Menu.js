@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import { menuActions } from "../../store/menuSlice";
-import { headerActions } from "../../store/headerSlice";
 import { Link } from "react-router-dom";
 import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import { ReactComponent as MenuBtnClose } from "../../assets/icons/menu-btn-close.svg";
@@ -10,14 +9,11 @@ import classes from "./Menu.module.scss";
 
 const Menu = () => {
   const dispatch = useDispatch();
-  // const hideMenu = useSelector((state) => state.menu.menuIsActive);
 
   const menuCloseHandler = () => {
     dispatch(menuActions.closeMenu());
   };
-  const headerChangeColor = () => {
-    dispatch(headerActions.changeColorToWhite());
-  };
+
   return (
     <div className={classes.menu_wrapper}>
       <div className={classes.menu_header}>
@@ -33,7 +29,7 @@ const Menu = () => {
         <li>
           <Link to={"/"} onClick={menuCloseHandler} className={classes.link}>
             <p>(0)</p>
-            <p onClick={headerChangeColor}>На главную</p>
+            <p>На главную</p>
           </Link>
         </li>
         <li>

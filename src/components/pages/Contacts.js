@@ -1,10 +1,10 @@
-import Header from "../UI/Header";
+import HeaderBlack from "../UI/HeaderBlack";
 import classes from "./Contacts.module.scss";
 
 const Contacts = () => {
   return (
     <>
-      <Header />
+      <HeaderBlack />
       <div className={classes.contacts_wrapper}>
         <h1>Контакты</h1>
         <a href="https://vk.com/justlvet">VK</a>
@@ -12,7 +12,7 @@ const Contacts = () => {
           Instagram
         </a>
         <a href="https://t.me/JustlVet">Telegram</a>
-        <a>WhatsApp</a>
+        <a href="https://wa.me/79118206707">WhatsApp</a>
       </div>
       <div className={classes.contacts_img}></div>
     </>

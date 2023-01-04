@@ -1,9 +1,9 @@
-import Header from "../UI/Header";
+import HeaderBlack from "../UI/HeaderBlack";
 
 const Publication = () => {
   return (
     <>
-      <Header />
+      <HeaderBlack />
       <h1>Публикации</h1>
     </>
   );

@@ -1,10 +1,10 @@
-import Header from "../UI/Header";
+import HeaderBlack from "../UI/HeaderBlack";
 import classes from "./About.module.scss";
 
 const Menu = () => {
   return (
     <div>
-      <Header />
+      <HeaderBlack />
       <div className={classes.about}>
         <div className={classes.about__photo}></div>
         <div className={classes.about__title}>

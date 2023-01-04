@@ -1,8 +1,8 @@
 import { menuActions } from "../../store/menuSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
-import { ReactComponent as MenuBtn } from "../../assets/icons/menu-btn.svg";
+import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
+import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-black.svg";
 
 import Menu from "./Menu";
 import classes from "./Header.module.scss";
@@ -20,11 +20,11 @@ const Header = () => {
 
       <div className={classes.header_menu}>
         <div>
-          <Pasient />
-          <h1>Владислав Бочкарев</h1>
+          <PasientBlack />
+          <h1 className={classes.black_text}>Владислав Бочкарев</h1>
         </div>
         <button onClick={menuOpenHandler}>
-          <MenuBtn />
+          <MenuBtnBlack />
         </button>
       </div>
     </>

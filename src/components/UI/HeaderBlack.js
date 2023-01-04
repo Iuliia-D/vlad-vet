@@ -5,9 +5,9 @@ import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black
 import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-black.svg";
 
 import Menu from "./Menu";
-import classes from "./Header.module.scss";
+import classes from "./HeaderBlack.module.scss";
 
-const Header = () => {
+const HeaderBlack = () => {
   const dispatch = useDispatch();
   const showMenu = useSelector((state) => state.menu.menuIsActive);
 
@@ -21,7 +21,7 @@ const Header = () => {
       <div className={classes.header_menu}>
         <div>
           <PasientBlack />
-          <h1 className={classes.black_text}>Владислав Бочкарев</h1>
+          <h1>Владислав Бочкарев</h1>
         </div>
         <button onClick={menuOpenHandler}>
           <MenuBtnBlack />
@@ -30,4 +30,4 @@ const Header = () => {
     </>
   );
 };
-export default Header;
+export default HeaderBlack;

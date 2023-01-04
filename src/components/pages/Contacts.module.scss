@@ -15,8 +15,10 @@
     padding: 15px 0;
     text-decoration: underline;
     font-size: var(--font-size-m);
+    color: var(--white-text-color);
     &:visited {
       color: var(--white-text-color);
+      text-decoration: underline;
     }
   }
 }

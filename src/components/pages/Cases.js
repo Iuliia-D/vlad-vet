@@ -4,7 +4,7 @@ const Cases = () => {
   return (
     <>
       <Header />
-      <h1>Cases</h1>
+      <h1>Клинические случаи</h1>
     </>
   );
 };

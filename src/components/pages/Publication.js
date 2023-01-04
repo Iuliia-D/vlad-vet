@@ -4,7 +4,7 @@ const Publication = () => {
   return (
     <>
       <Header />
-      <h1>Publication</h1>
+      <h1>Публикации</h1>
     </>
   );
 };

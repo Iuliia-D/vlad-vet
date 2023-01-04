@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { headerActions } from "../../store/headerSlice";
 import Header from "../UI/Header";
 import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_white.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow-black.svg";
@@ -8,6 +10,10 @@ import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black
 import classes from "./Main.module.scss";
 
 const Main = () => {
+  const dispatch = useDispatch();
+  const headerChangeColor = () => {
+    dispatch(headerActions.changeColorToBlack());
+  };
   return (
     <>
       <div className={classes.main_header}>
@@ -29,7 +35,11 @@ const Main = () => {
       <div className={classes.main__descr}>
         <p>Специализация: хирургия, травматология, ортопедия, рентген</p>
         <p>Стаж работы: с 2012 года</p>
-        <Link to={"/about"} className={classes.link}>
+        <Link
+          to={"/about"}
+          className={classes.link}
+          onClick={headerChangeColor}
+        >
           <p>Читать подробнее</p>
           <Arrow />
         </Link>
@@ -51,7 +61,11 @@ const Main = () => {
             подхожу к диагностике и лечению пациента исходя из его особенностей
             и ориентируюсь на обстоятельства.
           </p>
-          <Link to={"/cases"} className={classes.link}>
+          <Link
+            to={"/cases"}
+            className={classes.link}
+            onClick={headerChangeColor}
+          >
             <p>Читать подробнее</p>
             <ArrowWhite />
           </Link>
@@ -74,7 +88,11 @@ const Main = () => {
             Помимо практической деятельности, я уделяю время посещению
             конференций, семинаров и написанию публикаций о своей работе.
           </p>
-          <Link to={"/publication"} className={classes.link}>
+          <Link
+            to={"/publication"}
+            className={classes.link}
+            onClick={headerChangeColor}
+          >
             <p>Читать подробнее</p>
             <Arrow />
           </Link>

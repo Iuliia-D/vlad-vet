@@ -47,11 +47,41 @@ function App() {
             />
           }
         />
-        <Route path="cases" element={<Cases />} />
-        <Route path="publication" element={<Publication />} />
-        <Route path="contacts" element={<Contacts />} />
+        <Route
+          path="cases"
+          element={
+            <Cases
+              t={t}
+              changeLanguage={changeLanguage}
+              langMenuActive={langMenuActive}
+              enteredLanguage={enteredLanguage}
+            />
+          }
+        />
+        <Route
+          path="publication"
+          element={
+            <Publication
+              t={t}
+              changeLanguage={changeLanguage}
+              langMenuActive={langMenuActive}
+              enteredLanguage={enteredLanguage}
+            />
+          }
+        />
+        <Route
+          path="contacts"
+          element={
+            <Contacts
+              t={t}
+              changeLanguage={changeLanguage}
+              langMenuActive={langMenuActive}
+              enteredLanguage={enteredLanguage}
+            />
+          }
+        />
       </Routes>
-      <Footer />
+      <Footer t={t} />
     </>
   );
 }

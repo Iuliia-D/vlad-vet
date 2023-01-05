@@ -1,6 +1,13 @@
 {
   "name": "Vladislav Bochkarev",
   "lang": "Language",
+  "menu": {
+    "main": "Main page",
+    "about": "About me",
+    "cases": "Clinical cases",
+    "publication": "Publication",
+    "contacts": "Contacts"
+  },
   "mainTitle": "Veterinary surgeon, orthopedist, traumatologist, neurosurgeon, candidate of veterinary sciences",
   "mainDescription": {
     "part1": "Specialization: surgery, traumatology, orthopedics, X-ray",
@@ -25,7 +32,7 @@
 
   "aboutTitle": "Education",
   "aboutDescription": {
-    "title": "Federal State Budgetary Educational Institution of Higher Education 'State Agricultural Academy of Kostroma'",
+    "title": "Federal State Educational Institution of Higher Education 'Agricultural Academy of Kostroma'",
     "part1": "Faculty of Veterinary Medicine and Animal Science, specialty 'Veterinary Medicine', specialization 'Small Pets and Exotic Animals'.",
     "title2": "Postgraduate studies",
     "part2": "2012-2016 SPB GAVM Department of Obstetrics and Operative Surgery, in 2016 I defended my Ph.D. thesis in the specialty 06.02.04 Veterinary Surgery."
@@ -39,7 +46,11 @@
     "title3": "Veterinary center 'Pride'",
     "part3": "2019-2022 - surgeon, orthopedist, traumatologist",
     "title4": "Veterinarska ambulanta PVU MONTVET",
-    "adress": "22 Ilije Plamenca, Podgorica, Montenegro",
     "part4": "2022 - present - specialist in surgery, orthopedics, neurology, neurosurgery, traumatology"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "title2": "Adress",
+    "part1": "Veterinarska ambulanta PVU MONTVET"
   }
 }

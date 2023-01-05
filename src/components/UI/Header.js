@@ -28,7 +28,7 @@ const Header = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
       <div className={classes.header_menu}>
         <div>
           <Pasient />
-          <h1>Владислав Бочкарев</h1>
+          <h1>{t("name")}</h1>
         </div>
         <button onClick={menuOpenHandler}>
           <MenuBtn />

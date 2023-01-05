@@ -33,7 +33,7 @@ const HeaderBlack = ({
       <div className={classes.header_menu}>
         <div>
           <PasientBlack />
-          <h1>Владислав Бочкарев</h1>
+          <h1>{t("name")}</h1>
         </div>
         <button onClick={menuOpenHandler}>
           <MenuBtnBlack />

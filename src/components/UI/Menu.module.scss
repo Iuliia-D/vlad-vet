@@ -49,6 +49,9 @@
   display: flex;
   justify-content: flex-end;
   font-size: var(--font-size-m);
+  button {
+    font-size: var(--font-size-m);
+  }
 }
 
 .link {

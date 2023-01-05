@@ -38,7 +38,6 @@ const About = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         <ul>
           <li>
             <h3>{t("aboutDescription2.title4")}</h3>
-            <p>{t("aboutDescription2.adress")}</p>
             <p>{t("aboutDescription2.part4")}</p>
           </li>
           <li>

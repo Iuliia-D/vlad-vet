@@ -1,9 +1,19 @@
-import Header from "../UI/Header";
+import HeaderBlack from "../UI/HeaderBlack";
 
-const Publication = () => {
+const Publication = ({
+  t,
+  changeLanguage,
+  langMenuActive,
+  enteredLanguage,
+}) => {
   return (
     <>
-      <Header />
+      <HeaderBlack
+        t={t}
+        changeLanguage={changeLanguage}
+        langMenuActive={langMenuActive}
+        enteredLanguage={enteredLanguage}
+      />
       <h1>Публикации</h1>
     </>
   );

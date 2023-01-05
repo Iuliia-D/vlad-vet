@@ -1,13 +1,18 @@
 import { menuActions } from "../../store/menuSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
-import { ReactComponent as MenuBtn } from "../../assets/icons/menu-btn.svg";
+import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
+import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-black.svg";
 
 import Menu from "./Menu";
-import classes from "./Header.module.scss";
+import classes from "./HeaderBlack.module.scss";
 
-const Header = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
+const HeaderBlack = ({
+  t,
+  changeLanguage,
+  enteredLanguage,
+  langMenuActive,
+}) => {
   const dispatch = useDispatch();
   const showMenu = useSelector((state) => state.menu.menuIsActive);
 
@@ -27,14 +32,14 @@ const Header = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
 
       <div className={classes.header_menu}>
         <div>
-          <Pasient />
+          <PasientBlack />
           <h1>{t("name")}</h1>
         </div>
         <button onClick={menuOpenHandler}>
-          <MenuBtn />
+          <MenuBtnBlack />
         </button>
       </div>
     </>
   );
 };
-export default Header;
+export default HeaderBlack;

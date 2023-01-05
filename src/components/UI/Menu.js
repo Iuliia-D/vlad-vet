@@ -1,31 +1,40 @@
 import { useDispatch } from "react-redux";
 import { menuActions } from "../../store/menuSlice";
-import { headerActions } from "../../store/headerSlice";
+import { langActions } from "../../store/langSlice";
 import { Link } from "react-router-dom";
 import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import { ReactComponent as MenuBtnClose } from "../../assets/icons/menu-btn-close.svg";
 import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_black.svg";
+import LanguageChoise from "./LanguageChoise";
 
 import classes from "./Menu.module.scss";
 
-const Menu = () => {
+const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
   const dispatch = useDispatch();
-  // const hideMenu = useSelector((state) => state.menu.menuIsActive);
 
   const menuCloseHandler = () => {
     dispatch(menuActions.closeMenu());
   };
-  const headerChangeColor = () => {
-    dispatch(headerActions.changeColorToWhite());
+  const langMenuActiveHandler = () => {
+    dispatch(langActions.langMenuActive());
   };
+  const langMenuCloseHandler = () => {
+    dispatch(langActions.langMenuClose());
+  };
+
   return (
     <div className={classes.menu_wrapper}>
       <div className={classes.menu_header}>
         <div>
           <PasientBlack />
-          <h1>Владислав Бочкарев</h1>
+          <h1>{t("name")}</h1>
         </div>
-        <button onClick={menuCloseHandler}>
+        <button
+          onClick={() => {
+            menuCloseHandler();
+            langMenuCloseHandler();
+          }}
+        >
           <MenuBtnClose />
         </button>
       </div>
@@ -33,7 +42,7 @@ const Menu = () => {
         <li>
           <Link to={"/"} onClick={menuCloseHandler} className={classes.link}>
             <p>(0)</p>
-            <p onClick={headerChangeColor}>На главную</p>
+            <p>{t("menu.main")}</p>
           </Link>
         </li>
         <li>
@@ -43,7 +52,7 @@ const Menu = () => {
             className={classes.link}
           >
             <p>(1)</p>
-            <p>Обо мне</p>
+            <p>{t("menu.about")}</p>
           </Link>
         </li>
         <li>
@@ -53,7 +62,7 @@ const Menu = () => {
             className={classes.link}
           >
             <p>(2)</p>
-            <p>Клинические случаи</p>
+            <p>{t("menu.cases")}</p>
           </Link>
         </li>
         <li>
@@ -63,7 +72,7 @@ const Menu = () => {
             className={classes.link}
           >
             <p>(3)</p>
-            <p>Публикации</p>
+            <p>{t("menu.publication")}</p>
           </Link>
         </li>
         <li>
@@ -73,14 +82,18 @@ const Menu = () => {
             className={classes.link}
           >
             <p>(4)</p>
-            <p>Контакты</p>
+            <p>{t("menu.contacts")}</p>
           </Link>
         </li>
       </ul>
       <div className={classes.menu_lang}>
-        <p>Язык (Ru)</p>
+        <button onClick={langMenuActiveHandler}>
+          {t("lang")} ({enteredLanguage})
+        </button>
         <ExpandMore />
       </div>
+      {langMenuActive && <LanguageChoise changeLanguage={changeLanguage} />}
+      {/* <LanguageChoise changeLanguage={changeLanguage} /> */}
     </div>
   );
 };

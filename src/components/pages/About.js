@@ -1,65 +1,61 @@
 import HeaderBlack from "../UI/HeaderBlack";
 import classes from "./About.module.scss";
 
-const Menu = () => {
+const About = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   return (
     <div>
-      <HeaderBlack />
+      <HeaderBlack
+        t={t}
+        changeLanguage={changeLanguage}
+        enteredLanguage={enteredLanguage}
+        langMenuActive={langMenuActive}
+      />
       <div className={classes.about}>
         <div className={classes.about__photo}></div>
         <div className={classes.about__title}>
-          <h2>
-            Ветеринарный врач-хирург, ортопед, травматолог, нейрохирург,
-            кандидат ветеринарных наук
-          </h2>
+          <h2>{t("mainTitle")}</h2>
         </div>
       </div>
       <div className={classes.about__descr}>
-        <p>Специализация: хирургия, травматология, ортопедия, рентген</p>
-        <p>Стаж работы: с 2012 года</p>
+        <p>{t("mainDescription.part1")}</p>
+        <p>{t("mainDescription.part2")}</p>
       </div>
       <div className={classes.about_detail}>
         <div className={classes.about_detail__img}></div>
-        <h2>Образование</h2>
+        <h2>{t("aboutTitle")}</h2>
         <ul>
           <li>
-            <h3>Государственная сельскохозяйственная академия</h3>
-            <p>
-              Костромская ГСХА, факультет ветеринарной медицины и зоотехнии,
-              специальность «Ветеринария», специализация «Мелкие домашние и
-              экзотические животные».
-            </p>
+            <h3>{t("aboutDescription.title")}</h3>
+            <p>{t("aboutDescription.part1")}</p>
           </li>
           <li>
-            <h3>Аспирантура</h3>
-            <p>
-              2012-2016 СПБ ГАВМ кафедра акушерства и оперативной хирургии, в
-              2016 году защитил кандидатскую диссертацию по специальности
-              06.02.04 ветеринарная хирургия.
-            </p>
+            <h3>{t("aboutDescription.title2")}</h3>
+            <p>{t("aboutDescription.part2")}</p>
           </li>
         </ul>
 
-        <h2>Опыт работы</h2>
+        <h2>{t("aboutTitle2")}</h2>
         <ul>
           <li>
-            <h3>ГБУ СПб «Горветстанция»</h3>
-            <p>
-              2012-2017 гг ГБУ СПб «Горветстанция», ветеринарный врач-хирург,
-              рентгенолог.
-            </p>
+            <h3>{t("aboutDescription2.title4")}</h3>
+            <p>{t("aboutDescription2.adress")}</p>
+            <p>{t("aboutDescription2.part4")}</p>
           </li>
           <li>
-            <h3>Ветеринарная клиника СитиВет</h3>
-            <p>С 2017-2022 – ветеринарный врач хирург, травматолог, ортопед.</p>
+            <h3>{t("aboutDescription2.title3")}</h3>
+            <p>{t("aboutDescription2.part3")}</p>
           </li>
           <li>
-            <h3>Ветеринарный центр «Прайд»</h3>
-            <p>2019-2022 г - хирург, ортопед, травматолог</p>
+            <h3>{t("aboutDescription2.title2")}</h3>
+            <p>{t("aboutDescription2.part2")}</p>
+          </li>
+          <li>
+            <h3>{t("aboutDescription2.title")}</h3>
+            <p>{t("aboutDescription2.part1")}</p>
           </li>
         </ul>
       </div>
     </div>
   );
 };
-export default Menu;
+export default About;

@@ -1,0 +1,45 @@
+{
+  "name": "Vladislav Bochkarev",
+  "lang": "Language",
+  "mainTitle": "Veterinary surgeon, orthopedist, traumatologist, neurosurgeon, candidate of veterinary sciences",
+  "mainDescription": {
+    "part1": "Specialization: surgery, traumatology, orthopedics, X-ray",
+    "part2": "Work experience: since 2012",
+    "readMore": "Read more"
+  },
+  "mainPreTitle2": "Practice",
+  "mainTitle2": "Clinical Cases",
+  "mainDescription2": {
+    "part1": "Cases and Medical historys from my veterinary practice.",
+    "part2": "It is worth emphasizing that each case is individual, the course of the disease and the methods of treatment will differ, even with a similar diagnosis. I always approach the diagnosis and treatment of the patient based on his characteristics and focus on the circumstances.",
+    "readMore": "Read more"
+  },
+  "mainPreTitle3": "Scientific activity",
+  "mainTitle3": "Publications and further education",
+  "mainDescription3": {
+    "part1": "A distinctive feature of a professional is the continuous development of his skills.",
+    "part2": "In addition to practical activities, I spend time attending conferences, seminars and writing publications about my work.",
+    "readMore": "Read more"
+  },
+  "footerSocial": "Find Me Online",
+
+  "aboutTitle": "Education",
+  "aboutDescription": {
+    "title": "Federal State Budgetary Educational Institution of Higher Education 'State Agricultural Academy of Kostroma'",
+    "part1": "Faculty of Veterinary Medicine and Animal Science, specialty 'Veterinary Medicine', specialization 'Small Pets and Exotic Animals'.",
+    "title2": "Postgraduate studies",
+    "part2": "2012-2016 SPB GAVM Department of Obstetrics and Operative Surgery, in 2016 I defended my Ph.D. thesis in the specialty 06.02.04 Veterinary Surgery."
+  },
+  "aboutTitle2": "Work experience",
+  "aboutDescription2": {
+    "title": "GBU SPb 'Gorvetstation'",
+    "part1": "2012-2017 GBU St. Petersburg 'Gorvetstanciya', veterinary surgeon, radiologist.",
+    "title2": "Veterinary clinic 'SitiVet'",
+    "part2": "2017-2022 – veterinary surgeon, traumatologist, orthopedist.",
+    "title3": "Veterinary center 'Pride'",
+    "part3": "2019-2022 - surgeon, orthopedist, traumatologist",
+    "title4": "Veterinarska ambulanta PVU MONTVET",
+    "adress": "22 Ilije Plamenca, Podgorica, Montenegro",
+    "part4": "2022 - present - specialist in surgery, orthopedics, neurology, neurosurgery, traumatology"
+  }
+}

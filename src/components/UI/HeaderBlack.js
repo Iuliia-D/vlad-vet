@@ -7,7 +7,12 @@ import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-blac
 import Menu from "./Menu";
 import classes from "./HeaderBlack.module.scss";
 
-const HeaderBlack = () => {
+const HeaderBlack = ({
+  t,
+  changeLanguage,
+  enteredLanguage,
+  langMenuActive,
+}) => {
   const dispatch = useDispatch();
   const showMenu = useSelector((state) => state.menu.menuIsActive);
 
@@ -16,7 +21,14 @@ const HeaderBlack = () => {
   };
   return (
     <>
-      {showMenu && <Menu />}
+      {showMenu && (
+        <Menu
+          t={t}
+          changeLanguage={changeLanguage}
+          enteredLanguage={enteredLanguage}
+          langMenuActive={langMenuActive}
+        />
+      )}
 
       <div className={classes.header_menu}>
         <div>

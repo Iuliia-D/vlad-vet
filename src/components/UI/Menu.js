@@ -3,11 +3,12 @@ import { menuActions } from "../../store/menuSlice";
 import { Link } from "react-router-dom";
 import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import { ReactComponent as MenuBtnClose } from "../../assets/icons/menu-btn-close.svg";
-import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_black.svg";
+// import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_black.svg";
+import LanguageChoise from "./LanguageChoise";
 
 import classes from "./Menu.module.scss";
 
-const Menu = () => {
+const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
   const dispatch = useDispatch();
 
   const menuCloseHandler = () => {
@@ -73,10 +74,14 @@ const Menu = () => {
           </Link>
         </li>
       </ul>
-      <div className={classes.menu_lang}>
-        <p>Язык (Ru)</p>
+      {/* <div className={classes.menu_lang}>
+        <button>
+          {t("lang")} ({enteredLanguage})
+        </button>
         <ExpandMore />
-      </div>
+      </div> */}
+      {/* {langMenuActive && <LanguageChoise changeLanguage={changeLanguage} />} */}
+      <LanguageChoise changeLanguage={changeLanguage} />
     </div>
   );
 };

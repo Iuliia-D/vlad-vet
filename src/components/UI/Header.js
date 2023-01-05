@@ -7,7 +7,7 @@ import { ReactComponent as MenuBtn } from "../../assets/icons/menu-btn.svg";
 import Menu from "./Menu";
 import classes from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
   const dispatch = useDispatch();
   const showMenu = useSelector((state) => state.menu.menuIsActive);
 
@@ -16,7 +16,14 @@ const Header = () => {
   };
   return (
     <>
-      {showMenu && <Menu />}
+      {showMenu && (
+        <Menu
+          t={t}
+          changeLanguage={changeLanguage}
+          enteredLanguage={enteredLanguage}
+          langMenuActive={langMenuActive}
+        />
+      )}
 
       <div className={classes.header_menu}>
         <div>

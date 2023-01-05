@@ -9,6 +9,10 @@
     justify-content: flex-end;
     color: var(--white-text-color);
     margin: 130px 15px 0 0;
+    button {
+      color: var(--white-text-color);
+      font-size: var(--font-size-m);
+    }
   }
 }
 

@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import menuReducer from "./menuSlice";
-import headerReducer from "./headerSlice";
+import langReducer from "./langSlice";
 
 export default configureStore({
   reducer: {
     menu: menuReducer,
-    header: headerReducer,
+    lang: langReducer,
   },
 });

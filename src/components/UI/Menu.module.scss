@@ -4,7 +4,8 @@
   z-index: 10;
   width: 100%;
   height: 100%;
-  // transition: 0.2s;
+  // opacity: 1;
+  // transition: opacity ease-in-out 0.9s;
 }
 
 .menu_header {
@@ -34,6 +35,7 @@
     font-size: var(--font-size-s);
     text-decoration: none;
     color: var(--black-color);
+    transition: opacity ease-in-out 1s;
     &:visited {
       color: var(--black-color);
     }
@@ -51,6 +53,9 @@
   font-size: var(--font-size-m);
   button {
     font-size: var(--font-size-m);
+    &:visited {
+      color: var(--black-color);
+    }
   }
 }
 

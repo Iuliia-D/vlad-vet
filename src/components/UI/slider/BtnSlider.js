@@ -8,6 +8,7 @@ export default function BtnSlider({ direction, moveSlide }) {
   return (
     <button
       onClick={moveSlide}
+      onTouchMove={moveSlide}
       className={direction === "next" ? "btn-slide next" : "btn-slide prev"}
     >
       <img

@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { storage } from "../../../firebase";
+import { ref, getDownloadURL, listAll } from "firebase/storage";
+
 import "./Slider.css";
 import BtnSlider from "./BtnSlider";
 import dataSlider from "./dataSlider";
 
-export default function Slider() {
+const Slider = ({ c }) => {
   const [slideIndex, setSlideIndex] = useState(1);
+
+  const [imageList, setImageList] = useState([]);
+  const imageListRef = ref(storage, `casesImg/${c.id}`);
+
+  useEffect(() => {
+    listAll(imageListRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageList((prev) => [...prev, url]);
+        });
+      });
+    });
+  }, []);
 
   const nextSlide = () => {
     if (slideIndex !== dataSlider.length) {
@@ -28,16 +44,13 @@ export default function Slider() {
 
   return (
     <div className="container-slider">
-      {dataSlider.map((obj, index) => {
+      {imageList.map((url, index) => {
         return (
           <div
-            key={obj.id}
+            key={url}
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
-            <img
-              src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`}
-              alt="clinical case"
-            />
+            <img src={url} alt="clinical case" />
           </div>
         );
       })}
@@ -45,8 +58,9 @@ export default function Slider() {
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className="container-dots">
-        {Array.from({ length: dataSlider.length }).map((item, index) => (
+        {Array.from({ length: imageList.length }).map((_, index) => (
           <div
+            key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}
           ></div>
@@ -54,4 +68,6 @@ export default function Slider() {
       </div>
     </div>
   );
-}
+};
+
+export default Slider;

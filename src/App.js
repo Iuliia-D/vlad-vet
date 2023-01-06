@@ -5,7 +5,7 @@ import { langActions } from "./store/langSlice";
 
 import Main from "./components/pages/Main";
 import About from "./components/pages/About";
-import Cases from "./components/pages/Cases";
+import CasesList from "./components/pages/CasesList";
 import Publication from "./components/pages/Publication";
 import Contacts from "./components/pages/Contacts";
 import Footer from "./components/UI/Footer";
@@ -50,7 +50,7 @@ function App() {
         <Route
           path="cases"
           element={
-            <Cases
+            <CasesList
               t={t}
               changeLanguage={changeLanguage}
               langMenuActive={langMenuActive}

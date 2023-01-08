@@ -59,12 +59,14 @@
   }
 }
 
-.link {
-  text-align: center;
-  font-size: var(--font-size-m);
-  text-decoration: none;
-  color: var(--black-color);
-  &:visited {
+.menu_lang {
+  button {
+    text-align: center;
+    font-size: var(--font-size);
+    text-decoration: none;
     color: var(--black-color);
+    &:visited {
+      color: var(--black-color);
+    }
   }
 }

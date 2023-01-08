@@ -86,14 +86,15 @@ const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
           </Link>
         </li>
       </ul>
-      <div className={classes.menu_lang}>
-        <button onClick={langMenuActiveHandler}>
-          {t("lang")} ({enteredLanguage})
-        </button>
-        <ExpandMore />
-      </div>
+      {!langMenuActive && (
+        <div className={classes.menu_lang}>
+          <button onClick={langMenuActiveHandler}>
+            {t("lang")} ({enteredLanguage})
+          </button>
+          <ExpandMore />
+        </div>
+      )}
       {langMenuActive && <LanguageChoise changeLanguage={changeLanguage} />}
-      {/* <LanguageChoise changeLanguage={changeLanguage} /> */}
     </div>
   );
 };

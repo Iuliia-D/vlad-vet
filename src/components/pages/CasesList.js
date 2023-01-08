@@ -59,7 +59,7 @@ const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         enteredLanguage={enteredLanguage}
       />
       <div className={classes.cases_wrapper}>
-        <h2>Клинические случаи</h2>
+        <h2>{t("menu.cases")}</h2>
         <ul>
           {cases
             .sort((a, b) => (a.date < b.date ? -1 : 1))

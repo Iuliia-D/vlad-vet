@@ -4,11 +4,6 @@ import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_whi
 import classes from "./LanguageChoise.module.scss";
 
 const LanguageChoise = ({ changeLanguage }) => {
-  // const languages ={
-  //     russian: 'ru',
-  //     english: 'en',
-  //     serbian: 'sr'
-  // }
   const languages = ["ru", "en", "sr"];
 
   const dispatch = useDispatch();

@@ -3,8 +3,7 @@ import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import HeaderBlack from "../UI/HeaderBlack";
 import Case from "./Case";
-import Slider from "../UI/slider/Slider";
-import classes from "./Cases.module.scss";
+import classes from "./CasesList.module.scss";
 
 const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   const [cases, setCases] = useState([]);
@@ -12,7 +11,18 @@ const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    const q = query(collection(db, "cases"));
+    let q;
+    if (enteredLanguage === "ru") {
+      q = query(collection(db, "cases"));
+    } else if (enteredLanguage === "en") {
+      q = query(collection(db, "casesEN"));
+    } else {
+      q = query(collection(db, "casesSR"));
+    }
+
+    // const q = query(
+    //   collection(db, `${enteredLanguage === "ru" ? "cases" : "casesEN"}`)
+    // );
     const unsub = onSnapshot(q, (querySnapshot) => {
       let casesArray = [];
       querySnapshot.forEach((doc) => {
@@ -22,7 +32,7 @@ const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
       setIsLoading(false);
     });
     return () => unsub();
-  }, []);
+  }, [enteredLanguage]);
 
   console.log(cases);
 
@@ -45,47 +55,16 @@ const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         langMenuActive={langMenuActive}
         enteredLanguage={enteredLanguage}
       />
-      <ul>
-        {cases
-          // .sort((a, b) => (a.date < b.date ? -1 : 1))
-          .map((c) => {
-            return <Case key={c.id} c={c} />;
-          })}
-      </ul>
-      {/* <div className={classes.cases_wrapper}>
+      <div className={classes.cases_wrapper}>
         <h2>Клинические случаи</h2>
-        <h3>Первичное новообразование головного мозга у собаки</h3>
-        <Slider />
-        <p>
-          Первичное новообразование головного мозга у собаки — проблема
-          встречающаяся по разным источникам в 1,5-3% от всех новообразований.
-          <br />
-          Частым клиническим проявлением новообразования является наличие
-          приступов. <br />
-          Для лечения новообразования задействуется множество ветеринарных
-          специалистов.
-        </p>
-        <p>
-          10 летняя собака Боня поступила на приём, после того как приступы
-          повторились с короткими интервалами 5 раз. <br />
-          Команда ОРИТ ветеринарного центра приняла все необходимые усилия для
-          стабилизации общего состояния. <br />
-        </p>
-        <p>
-          После стабилизации были назначены антиконвульсанты и рекомендовано
-          проведение МРТ головного мозга. <br />
-          По результатам МРТ было выявлено Новообразование в области затылочной
-          доли коры больших полушарий и мозжечка с правой стороны. <br />
-          Хозяевам было рекомендовано оперативное лечение, после которого Боня
-          стабилизировалась командой отделения ОРИТ.
-          <br /> Во время операции осуществлялась навигация с помощью врачей
-          отделения визуальной диагностики.
-          <br /> Результатом гистологического исследования являлась
-          олигодендроглиома — первичное новообразование головного мозга,
-          основным лечением которой является хирургическое вмешательство. <br />
-        </p>
-        <p>Контрольное МРТ головного мозга роста новообразований не выявило.</p>
-      </div> */}
+        <ul>
+          {cases
+            .sort((a, b) => (a.date < b.date ? -1 : 1))
+            .map((c) => {
+              return <Case key={c.id} c={c} t={t} />;
+            })}
+        </ul>
+      </div>
     </>
   );
 };

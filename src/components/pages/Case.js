@@ -1,58 +1,42 @@
-// import HeaderBlack from "../UI/HeaderBlack";
+import { useState } from "react";
 import Slider from "../UI/slider/Slider";
-import classes from "./Cases.module.scss";
+import { ReactComponent as Arrow } from "../../assets/icons/arrow-black.svg";
+import classes from "./CasesList.module.scss";
 
-const Case = ({ c }) => {
+const Case = ({ c, t }) => {
+  const [displayDetails, setDisplayDetails] = useState(false);
+  const displayDetaisHandler = () => {
+    setDisplayDetails(!displayDetails);
+  };
+
+  const caseArray = Object.keys(c).map((key) => [String(key), c[key]]);
+  const descr = caseArray.filter((fild) => fild[0] === "descr").shift();
+
+  const descrArr = descr[1]?.split("<p>");
+
   return (
     <>
       <li className={classes.case}>
-        <div className={classes.cases_wrapper}>
-          <h2>Клинические случаи</h2>
+        <div>
           <h3>{c.title}</h3>
           <Slider c={c} />
-          <p>{c.descr}</p>
-          <p>{c.descr2}</p>
-          <p>{c.descr3}</p>
-          <p>{c.descr4}</p>
-          <p>{c.descr5}</p>
-          <p>{c.descr6}</p>
-          <p>{c.descr7}</p>
-
-          {/* <h3>Первичное новообразование головного мозга у собаки</h3>
-          
-          <p>
-            Первичное новообразование головного мозга у собаки — проблема
-            встречающаяся по разным источникам в 1,5-3% от всех новообразований.
-            <br />
-            Частым клиническим проявлением новообразования является наличие
-            приступов. 
-            Для лечения новообразования задействуется множество ветеринарных
-            специалистов.
-          </p>
-          <p>
-            10 летняя собака Боня поступила на приём, после того как приступы
-            повторились с короткими интервалами 5 раз. <br />
-            Команда ОРИТ ветеринарного центра приняла все необходимые усилия для
-            стабилизации общего состояния. <br />
-          </p>
-          <p>
-            После стабилизации были назначены антиконвульсанты и рекомендовано
-            проведение МРТ головного мозга.
-            По результатам МРТ было выявлено Новообразование в области
-            затылочной доли коры больших полушарий и мозжечка с правой стороны.{" "}
-            <br />
-            Владельцам было рекомендовано оперативное лечение, после которого Боня
-            стабилизировалась командой отделения ОРИТ.
-            Во время операции осуществлялась навигация с помощью врачей
-            отделения визуальной диагностики.
-            Результатом гистологического исследования являлась
-            олигодендроглиома — первичное новообразование головного мозга,
-            основным лечением которой является хирургическое вмешательство.{" "}
-            <br />
-          </p>
-          <p>
-            Контрольное МРТ головного мозга роста новообразований не выявило.
-          </p> */}
+          {displayDetails && (
+            <article>
+              {descrArr.length ? (
+                descrArr.map((p, i) => <p key={i}>{p}</p>)
+              ) : (
+                <p>нет описания</p>
+              )}
+            </article>
+          )}
+          <button className={classes.link} onClick={displayDetaisHandler}>
+            {displayDetails ? (
+              <p>{t("mainDescription.hide")}</p>
+            ) : (
+              <p>{t("mainDescription.readMore")}</p>
+            )}
+            <Arrow />
+          </button>
         </div>
       </li>
     </>

@@ -4,7 +4,6 @@ import { ref, getDownloadURL, listAll } from "firebase/storage";
 
 import "./Slider.css";
 import BtnSlider from "./BtnSlider";
-import dataSlider from "./dataSlider";
 
 const Slider = ({ c }) => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -23,9 +22,9 @@ const Slider = ({ c }) => {
   }, []);
 
   const nextSlide = () => {
-    if (slideIndex !== dataSlider.length) {
+    if (slideIndex !== imageList.length) {
       setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === dataSlider.length) {
+    } else if (slideIndex === imageList.length) {
       setSlideIndex(1);
     }
   };
@@ -34,7 +33,7 @@ const Slider = ({ c }) => {
     if (slideIndex !== 1) {
       setSlideIndex(slideIndex - 1);
     } else if (slideIndex === 1) {
-      setSlideIndex(dataSlider.length);
+      setSlideIndex(imageList.length);
     }
   };
 

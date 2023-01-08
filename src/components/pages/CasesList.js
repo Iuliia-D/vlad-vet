@@ -3,6 +3,7 @@ import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import HeaderBlack from "../UI/HeaderBlack";
 import Case from "./Case";
+import LoadingPage from "./LoadingPage";
 import classes from "./CasesList.module.scss";
 
 const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
@@ -39,7 +40,9 @@ const CasesList = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   if (isLoading) {
     return (
       <section>
-        <p>Loading...</p>
+        <p>
+          <LoadingPage />
+        </p>
       </section>
     );
   }

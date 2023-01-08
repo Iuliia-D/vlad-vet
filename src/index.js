@@ -10,11 +10,12 @@ import "./i18n";
 
 import "./index.scss";
 import App from "./App";
+import LoadingPage from "./components/pages/LoadingPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingPage />}>
       <BrowserRouter>
         <App />
       </BrowserRouter>

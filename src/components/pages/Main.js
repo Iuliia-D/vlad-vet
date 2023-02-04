@@ -40,9 +40,18 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         <div className={classes.main_about__photo}></div>
         <div className={classes.main_about__title}>
           <h2>{t("mainTitle")}</h2>
+          <div className={classes.main__descrDesktop}>
+            <p>{t("mainDescription.part1")}</p>
+            <p>{t("mainDescription.part2")}</p>
+            <p>{t("mainDescription.part3")}</p>
+            <Link to={"/about"} className={classes.link}>
+              <p>{t("mainDescription.readMore")}</p>
+              <Arrow />
+            </Link>
+          </div>
         </div>
       </div>
-      <div className={classes.main__descr}>
+      <div className={classes.main__descrMobile}>
         <p>{t("mainDescription.part1")}</p>
         <p>{t("mainDescription.part2")}</p>
         <Link to={"/about"} className={classes.link}>

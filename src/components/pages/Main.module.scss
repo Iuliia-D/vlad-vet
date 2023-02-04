@@ -42,7 +42,7 @@
     }
   }
 }
-.main__descr {
+.main__descrMobile {
   margin-top: 10px;
   padding: 20px;
   // width: 70%;
@@ -129,4 +129,33 @@ h2 {
   // &:visited {
   //   color: var(--black-color);
   // }
+}
+
+@media (min-width: 1200px) {
+  .main_header {
+    background-image: url("../../assets/img/main-bg-d.png");
+    height: 550px;
+    .main_header__lang {
+      margin: 410px 20px 0 0;
+    }
+  }
+
+  .main_about {
+    padding: 64px 0 64px 0;
+    .main_about__photo {
+      width: 476px;
+      height: 634px;
+    }
+    .main_about__title {
+      width: 40%;
+      padding: 30px 100px 10px 100px;
+      h2 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+  }
+  .main__descrMobile {
+    display: none;
+  }
 }

@@ -18,3 +18,27 @@
     padding-top: 3px;
   }
 }
+
+@media (min-width: 1200px) {
+  .header_menu {
+    display: grid;
+    grid-template-columns: 93% auto;
+    margin-left: 30px;
+    padding: 40px 12px 12px 12px;
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: var(--font-size);
+      letter-spacing: 0.04em;
+      margin: 0 0 0 9px;
+      color: var(--white-text-color);
+    }
+
+    button {
+      padding-top: 3px;
+    }
+  }
+}

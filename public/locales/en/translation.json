@@ -5,7 +5,7 @@
     "main": "Main page",
     "about": "About me",
     "cases": "Clinical cases",
-    "publication": "Publication",
+    "feedback": "Feedback",
     "contacts": "Contacts"
   },
   "mainTitle": "Veterinary surgeon, orthopedist, traumatologist, neurosurgeon, candidate of veterinary sciences",
@@ -23,14 +23,13 @@
     "part2": "It is worth emphasizing that each case is individual, the course of the disease and the methods of treatment will differ, even with a similar diagnosis. I always approach the diagnosis and treatment of the patient based on his characteristics and focus on the circumstances.",
     "readMore": "Read more"
   },
-  "mainPreTitle3": "Scientific activity",
-  "mainTitle3": "Publications and further education",
+  "mainWritwToMe": "Write to me",
+  "mainPreTitle3": "You can give feedback or ask me a question.",
+  "mainTitle3": "Feedback from patients by the words of their owners",
   "mainDescription3": {
-    "part1": "A distinctive feature of a professional is the continuous development of his skills.",
-    "part2": "In addition to practical activities, I spend time attending conferences, seminars and writing publications about my work.",
-    "readMore": "Read more"
+    "readMore": "Read all feedback",
+    "footerSocial": "Find Me Online"
   },
-  "footerSocial": "Find Me Online",
 
   "aboutTitle": "Education",
   "aboutDescription": {

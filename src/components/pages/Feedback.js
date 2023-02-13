@@ -1,11 +1,6 @@
 import HeaderBlack from "../UI/HeaderBlack";
 
-const Publication = ({
-  t,
-  changeLanguage,
-  langMenuActive,
-  enteredLanguage,
-}) => {
+const Feedback = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   return (
     <>
       <HeaderBlack
@@ -14,9 +9,9 @@ const Publication = ({
         langMenuActive={langMenuActive}
         enteredLanguage={enteredLanguage}
       />
-      <h1>Публикации</h1>
+      <h1>Feedback</h1>
     </>
   );
 };
 
-export default Publication;
+export default Feedback;

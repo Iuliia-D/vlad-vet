@@ -67,12 +67,12 @@ const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
         </li>
         <li>
           <Link
-            to={"/publication"}
+            to={"/feedback"}
             onClick={menuCloseHandler}
             className={classes.link}
           >
             <p>(3)</p>
-            <p>{t("menu.publication")}</p>
+            <p>{t("menu.feedback")}</p>
           </Link>
         </li>
         <li>

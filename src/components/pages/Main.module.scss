@@ -111,50 +111,59 @@
 .main_feedback__photo {
   background-image: url("../../assets/img/main-dog-mobile.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
-  height: 300px;
+  height: 100%;
   padding: 20px 30px 0 20px;
-  .main_feedback__preTitle {
-    padding: 10px 100px 10px 0;
+  .main_feedback__deskr {
+    .main_feedback__preTitle {
+      padding: 10px 100px 10px 0;
+    }
+    h2 {
+      padding-top: 12px;
+      line-height: 23px;
+      font-weight: 500;
+      width: 260px;
+    }
+    .link_contacts {
+      color: var(--black-text-color);
+      font-size: 20px;
+      p {
+        padding: 40px 0 20px 0px;
+      }
+    }
+
+    .main_feedback__text {
+      background: url("../../assets/icons/quote.svg") no-repeat right top;
+      margin: 70px 10px 10px 20px;
+      padding: 0 20px 0 30px;
+      border-left: 2px solid black;
+      .main_feedback__name {
+        font-size: var(--font-size-m);
+        padding: 20px 0 20px 0;
+      }
+    }
   }
-  h2 {
-    padding-top: 12px;
-    line-height: 29px;
-    font-weight: 500;
-  }
-  .link_contacts {
-    color: var(--black-text-color);
-    font-size: 20px;
-    p {
-      padding: 40px 0 20px 0px;
+
+  // h2 {
+  //   padding: 20px 0;
+  //   font-size: var(--font-size-m);
+  //   font-weight: 500;
+  // }
+  .link {
+    margin: 50px 0;
+    color: var(--black-color);
+    &:visited {
+      color: var(--black-color);
     }
   }
 }
 
-.main_feedback__text {
-  margin: 40px 10px 10px 20px;
-  padding: 0 20px 0 30px;
-  border-left: 2px solid black;
-  .main_feedback__name {
-    font-size: var(--font-size-m);
-    padding: 0 0 20px 0;
-  }
-}
+// Responsive
 
-// h2 {
-//   padding: 20px 0;
-//   font-size: var(--font-size-m);
-//   font-weight: 500;
-// }
-.link {
-  margin: 50px 0;
-  // &:visited {
-  //   color: var(--black-color);
-  // }
-}
-
+// @media (min-width: 1200px) {
 @media (min-width: 1200px) {
+  // header
   .main_header {
     background-image: url("../../assets/img/main-bg-d.png");
     height: 550px;
@@ -162,7 +171,7 @@
       margin: 410px 20px 0 0;
     }
   }
-
+  // about
   .main_about {
     padding: 64px 0 64px 0;
     .main_about__photo {
@@ -177,8 +186,61 @@
         line-height: 44px;
       }
     }
+    .main__descrDesktop {
+      display: block;
+      font-size: var(--font-size);
+      margin: 30px 0 0 0;
+    }
   }
   .main__descrMobile {
     display: none;
+  }
+
+  // cases
+  .main_cases {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 914px;
+    .main_cases__photo {
+      background-image: url("../../assets/img/cat-desktop.png");
+      width: 55%;
+      height: 711px;
+      margin: 120px 0 120px 20px;
+    }
+    .main_cases__text {
+      width: 404px;
+      margin: 240px 30px 0 20px;
+      h2 {
+        padding: 30px 0;
+        font-size: var(--font-size-l);
+        font-weight: 500;
+      }
+      .main_cases__number {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  // FEEDBACK
+  .main_feedback__photo {
+    background-image: url("../../assets/img/main-dog-desktop.png");
+    background-size: cover;
+    height: 909px;
+    .main_feedback__deskr {
+      margin: 100px 0 0 50px;
+      .main_feedback__number {
+        padding: 0 0 30px 0;
+      }
+      h2 {
+        font-size: var(--font-size-l);
+        line-height: 44px;
+        width: 453px;
+        padding: 40px 0 0 0;
+      }
+      .main_feedback__text {
+        width: 30%;
+        margin: 70px 0 10px 0;
+      }
+    }
   }
 }

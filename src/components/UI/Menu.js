@@ -23,79 +23,83 @@ const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
   };
 
   return (
-    <div className={classes.menu_wrapper}>
-      <div className={classes.menu_header}>
-        <div>
-          <PasientBlack />
-          <h1>{t("name")}</h1>
-        </div>
-        <button
-          onClick={() => {
-            menuCloseHandler();
-            langMenuCloseHandler();
-          }}
-        >
-          <MenuBtnClose />
-        </button>
-      </div>
-      <ul className={classes.menu_list}>
-        <li>
-          <Link to={"/"} onClick={menuCloseHandler} className={classes.link}>
-            <p>(0)</p>
-            <p>{t("menu.main")}</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/about"}
-            onClick={menuCloseHandler}
-            className={classes.link}
+    <>
+      <div className={classes.menu_wrapper}>
+        <div className={classes.menu_header}>
+          <div>
+            <PasientBlack />
+            <h1>{t("name")}</h1>
+          </div>
+          <button
+            onClick={() => {
+              menuCloseHandler();
+              langMenuCloseHandler();
+            }}
           >
-            <p>(1)</p>
-            <p>{t("menu.about")}</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/cases"}
-            onClick={menuCloseHandler}
-            className={classes.link}
-          >
-            <p>(2)</p>
-            <p>{t("menu.cases")}</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/feedback"}
-            onClick={menuCloseHandler}
-            className={classes.link}
-          >
-            <p>(3)</p>
-            <p>{t("menu.feedback")}</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/contacts"}
-            onClick={menuCloseHandler}
-            className={classes.link}
-          >
-            <p>(4)</p>
-            <p>{t("menu.contacts")}</p>
-          </Link>
-        </li>
-      </ul>
-      {!langMenuActive && (
-        <div className={classes.menu_lang}>
-          <button onClick={langMenuActiveHandler}>
-            {t("lang")} ({enteredLanguage})
+            <MenuBtnClose />
           </button>
-          <ExpandMore />
         </div>
-      )}
-      {langMenuActive && <LanguageChoise changeLanguage={changeLanguage} />}
-    </div>
+        <ul className={classes.menu_list}>
+          <li>
+            <Link to={"/"} onClick={menuCloseHandler} className={classes.link}>
+              <span>(0)</span>
+              <p>{t("menu.main")}</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/about"}
+              onClick={menuCloseHandler}
+              className={classes.link}
+            >
+              <span>(1)</span>
+              <p>{t("menu.about")}</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/cases"}
+              onClick={menuCloseHandler}
+              className={classes.link}
+            >
+              <span>(2)</span>
+              <p>{t("menu.cases")}</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/feedback"}
+              onClick={menuCloseHandler}
+              className={classes.link}
+            >
+              <span>(3)</span>
+              <p>{t("menu.feedback")}</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/contacts"}
+              onClick={menuCloseHandler}
+              className={classes.link}
+            >
+              <span>(4)</span>
+              <p>{t("menu.contacts")}</p>
+            </Link>
+          </li>
+        </ul>
+        <div className={classes.menu_langContainer}>
+          {!langMenuActive && (
+            <div className={classes.menu_lang}>
+              <button onClick={langMenuActiveHandler}>
+                {t("lang")} ({enteredLanguage})
+              </button>
+              <ExpandMore />
+            </div>
+          )}
+          {langMenuActive && <LanguageChoise changeLanguage={changeLanguage} />}
+        </div>
+      </div>
+    </>
   );
 };
 export default Menu;

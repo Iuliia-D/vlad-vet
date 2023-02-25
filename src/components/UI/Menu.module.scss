@@ -10,9 +10,9 @@
 
 .menu_header {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 93% auto;
   padding: 25px 12px 30px 12px;
-  border-bottom: 1px solid var(--black-color);
+  // border-bottom: 1px solid var(--black-color);
   div {
     display: flex;
     flex-direction: row;
@@ -27,21 +27,32 @@
 }
 
 .menu_list {
-  li .link {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid var(--black-color);
-    padding: 30px;
-    font-size: var(--font-size-s);
-    text-decoration: none;
-    color: var(--black-color);
-    transition: opacity ease-in-out 1s;
-    &:visited {
-      color: var(--black-color);
+  li {
+    list-style-type: none;
+    &:last-child {
+      border-bottom: 1px solid var(--black-color);
     }
-    p:last-child {
-      margin-left: 5px;
-      font-size: var(--font-size-m);
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      border-top: 1px solid var(--black-color);
+      padding: 30px;
+      font-size: var(--font-size-s);
+      text-decoration: none;
+
+      color: var(--black-color);
+      transition: opacity ease-in-out 1s;
+      &:visited {
+        color: var(--black-color);
+      }
+      p:last-child {
+        margin-left: 5px;
+        font-size: var(--font-size-m);
+      }
+      // &:last-child {
+      //   border-bottom: 1px solid var(--black-color);
+      // }
     }
   }
 }
@@ -67,6 +78,40 @@
     color: var(--black-color);
     &:visited {
       color: var(--black-color);
+    }
+  }
+}
+
+// Responsive
+
+@media (min-width: 1200px) {
+  .menu_wrapper {
+    padding: 16px 10px 30px 25px;
+    .menu_list {
+      margin: 0 0 0 700px;
+
+      li {
+        font-weight: 500;
+        font-size: 64px;
+
+        .link {
+          padding-left: 150px;
+          span {
+            margin: -5px 5px 0 0;
+          }
+          p {
+            font-size: var(--font-size-l);
+          }
+        }
+      }
+    }
+    .menu_langContainer {
+      margin: -2px 0 20px 700px;
+      .menu_lang {
+        button {
+          text-align: left;
+        }
+      }
     }
   }
 }

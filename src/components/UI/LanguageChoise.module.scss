@@ -16,3 +16,12 @@
     margin-top: 10px;
   }
 }
+
+@media (min-width: 1200px) {
+  .lang_wrapper {
+    button {
+      justify-content: left;
+      margin: 0 0 0 165px;
+    }
+  }
+}

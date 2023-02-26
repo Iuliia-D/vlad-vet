@@ -2,7 +2,7 @@
   background-image: url("../../assets/img/main-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 230px;
+  height: 244px;
   .main_header__lang {
     display: flex;
     flex-direction: row;
@@ -11,6 +11,7 @@
     margin: 130px 15px 0 0;
     button {
       color: var(--white-text-color);
+      font-family: var(--font-base);
       font-size: var(--font-size-m);
     }
   }
@@ -28,8 +29,6 @@
     background-image: url("../../assets/img/main-photo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    // width: 137px;
-    // height: 183px;
     width: 50%;
     height: 250px;
   }
@@ -167,7 +166,7 @@
     background-image: url("../../assets/img/main-bg-d.png");
     height: 550px;
     .main_header__lang {
-      margin: 410px 20px 0 0;
+      margin: 15px 15px 0 0;
     }
   }
   // about

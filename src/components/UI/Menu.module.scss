@@ -58,22 +58,13 @@
 }
 
 .menu_lang {
-  padding: 30px;
+  padding: 15px;
   display: flex;
   justify-content: flex-end;
-  font-size: var(--font-size-m);
-  button {
-    font-size: var(--font-size-m);
-    &:visited {
-      color: var(--black-color);
-    }
-  }
-}
-
-.menu_lang {
   button {
     text-align: center;
-    font-size: var(--font-size);
+    font-family: var(--font-base);
+    font-size: var(--font-size-m);
     text-decoration: none;
     color: var(--black-color);
     &:visited {
@@ -102,16 +93,14 @@
           p {
             font-size: var(--font-size-l);
           }
+          &:hover {
+            backdrop-filter: blur(5px);
+          }
         }
       }
     }
-    .menu_langContainer {
-      margin: -2px 0 20px 700px;
-      .menu_lang {
-        button {
-          text-align: left;
-        }
-      }
-    }
+    // .menu_langContainer {
+    //   margin: -2px 0 20px 700px;
+    // }
   }
 }

@@ -29,14 +29,16 @@ const Case = ({ c, t }) => {
               )}
             </article>
           )}
-          <button className={classes.link} onClick={displayDetaisHandler}>
-            {displayDetails ? (
-              <p>{t("mainDescription.hide")}</p>
-            ) : (
-              <p>{t("mainDescription.readMore")}</p>
-            )}
-            <Arrow />
-          </button>
+          <div className={classes.link_container}>
+            <button className={classes.link} onClick={displayDetaisHandler}>
+              {displayDetails ? (
+                <p>{t("mainDescription.hide")}</p>
+              ) : (
+                <p>{t("mainDescription.readMore")}</p>
+              )}
+              <Arrow />
+            </button>
+          </div>
         </div>
       </li>
     </>

@@ -18,3 +18,12 @@
     padding-top: 3px;
   }
 }
+
+@media (min-width: 1200px) {
+  .header_menu {
+    display: grid;
+    grid-template-columns: 91% auto;
+    margin-left: 30px;
+    padding: 40px 12px 12px 12px;
+  }
+}

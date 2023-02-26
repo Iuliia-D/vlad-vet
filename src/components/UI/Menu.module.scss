@@ -10,7 +10,7 @@
 
 .menu_header {
   display: grid;
-  grid-template-columns: 93% auto;
+  grid-template-columns: 91% auto;
   padding: 25px 12px 30px 12px;
   // border-bottom: 1px solid var(--black-color);
   div {
@@ -99,8 +99,9 @@
         }
       }
     }
-    // .menu_langContainer {
-    //   margin: -2px 0 20px 700px;
-    // }
+  }
+  .menu_header {
+    display: grid;
+    grid-template-columns: 94% auto;
   }
 }

@@ -70,7 +70,6 @@
     font-size: var(--font-size);
     font-weight: 500;
     margin: -3px 5px 0 0;
-    // color: var(--black-color);
   }
 }
 
@@ -103,58 +102,56 @@
     justify-content: flex-end;
     color: var(--white-text-color);
     margin: 50px 0;
+    &:visited {
+      color: var(--white-text-color);
+    }
   }
 }
 
 // ****************** FEEDBACK ***************
 .main_feedback__photo {
-  background-image: url("../../assets/img/main-dog-mobile.png");
+  background-image: url("../../assets/img/dog&man-mobile.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  // width: 100%;
+  height: 244px;
   padding: 20px 30px 0 20px;
-  .main_feedback__deskr {
-    .main_feedback__preTitle {
-      padding: 10px 100px 10px 0;
-    }
-    h2 {
-      padding-top: 12px;
-      line-height: 23px;
-      font-weight: 500;
-      width: 260px;
-    }
-    .link_contacts {
-      color: var(--black-text-color);
-      font-size: 20px;
-      p {
-        padding: 40px 0 20px 0px;
-      }
-    }
-
-    .main_feedback__text {
-      background: url("../../assets/icons/quote.svg") no-repeat right top;
-      margin: 70px 10px 10px 20px;
-      padding: 0 20px 0 30px;
-      border-left: 2px solid black;
-      .main_feedback__name {
-        font-size: var(--font-size-m);
-        padding: 20px 0 20px 0;
-      }
+}
+.main_feedback__deskr {
+  padding: 20px 30px 0 20px;
+  .main_feedback__preTitle {
+    padding: 10px 10px 10px 0;
+    font-size: var(--font-size-s);
+  }
+  h2 {
+    padding-top: 12px;
+    line-height: 27px;
+    font-weight: 500;
+  }
+  .link_contacts {
+    color: var(--black-text-color);
+    font-size: 20px;
+    p {
+      padding: 40px 0 20px 0px;
     }
   }
 
-  // h2 {
-  //   padding: 20px 0;
-  //   font-size: var(--font-size-m);
-  //   font-weight: 500;
-  // }
-  .link {
-    margin: 50px 0;
-    color: var(--black-color);
-    &:visited {
-      color: var(--black-color);
+  .main_feedback__text {
+    background: url("../../assets/icons/quote.svg") no-repeat right top;
+    margin: 40px 10px 10px 10px;
+    padding: 0 20px 0 30px;
+    border-left: 2px solid black;
+    .main_feedback__name {
+      font-size: var(--font-size-m);
+      padding: 20px 0 20px 0;
     }
+  }
+}
+.link {
+  margin: 50px 0;
+  color: var(--black-color);
+  &:visited {
+    color: var(--black-color);
   }
 }
 
@@ -220,24 +217,34 @@
   }
 
   // FEEDBACK
-  .main_feedback__photo {
-    background-image: url("../../assets/img/main-dog-desktop.png");
-    background-size: cover;
-    height: 909px;
-    .main_feedback__deskr {
-      margin: 100px 0 0 50px;
-      .main_feedback__number {
-        padding: 0 0 30px 0;
+  .main_feedback__wrapper {
+    display: flex;
+    justify-content: center;
+
+    .main_feedback__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 30px 0 0 0;
+      max-width: 1920px;
+
+      .main_feedback__photo {
+        background: url("../../assets/img/dog&man-desktop.png") no-repeat right
+          top;
+        background-size: cover;
+        width: 100%;
+        height: 546px;
+        align-self: center;
       }
-      h2 {
-        font-size: var(--font-size-l);
-        line-height: 44px;
-        width: 453px;
-        padding: 40px 0 0 0;
-      }
-      .main_feedback__text {
-        width: 30%;
-        margin: 70px 0 10px 0;
+      .main_feedback__deskr {
+        margin: 10px 0 0 10px;
+        .main_feedback__number {
+          padding: 30px 0 0 0;
+        }
+        h2 {
+          font-size: var(--font-size-l);
+          line-height: 44px;
+          padding: 40px 0 0 0;
+        }
       }
     }
   }

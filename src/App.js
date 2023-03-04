@@ -9,7 +9,9 @@ import Footer from "./components/UI/Footer";
 
 const About = React.lazy(() => import("./components/pages/About"));
 const CasesList = React.lazy(() => import("./components/pages/CasesList"));
-const Feedback = React.lazy(() => import("./components/pages/Feedback"));
+const FeedbackList = React.lazy(() =>
+  import("./components/pages/FeedbackList")
+);
 const Contacts = React.lazy(() => import("./components/pages/Contacts"));
 
 function App() {
@@ -63,7 +65,7 @@ function App() {
         <Route
           path="feedback"
           element={
-            <Feedback
+            <FeedbackList
               t={t}
               changeLanguage={changeLanguage}
               langMenuActive={langMenuActive}

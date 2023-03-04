@@ -77,32 +77,35 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         </div>
       </div>
       {/* ****************** FEEDBACK *************** */}
+      <div className={classes.main_feedback__wrapper}>
+        <div className={classes.main_feedback__container}>
+          <div className={classes.main_feedback__photo}></div>
 
-      <div className={classes.main_feedback__photo}>
-        <div className={classes.main_feedback__deskr}>
-          <p className={classes.main_feedback__number}>02</p>
-          <Link to={"/contacts"} className={classes.link_contacts}>
-            <p>{t("mainWritwToMe")}</p>
-          </Link>
-          <p className={classes.main_feedback__preTitle}>
-            {t("mainPreTitle3")}
-          </p>
-          <h2>{t("mainTitle3")}</h2>
-
-          <div className={classes.main_feedback__text}>
-            <p className={classes.main_feedback__name}>Петр Иванов</p>
-
-            <p>
-              Оторвали Мишке лапу, уронили Мишку на пол. Пришлось везти Мишку в
-              клинику. Там наш доктор ай-Владислав пришил Мишке лапку, да так,
-              что у Мишки улучшилась мелкая моторика, теперь не просто медведь,
-              а еще и помощник по хозяйству! Мы даже не жалеем, что лапу
-              оторвали, в будущем планируем повторить с остальными тремя.
-            </p>
-            <Link to={"/feedback"} className={classes.link}>
-              <p>{t("mainDescription3.readMore")}</p>
-              <Arrow />
+          <div className={classes.main_feedback__deskr}>
+            <p className={classes.main_feedback__number}>02</p>
+            <Link to={"/contacts"} className={classes.link_contacts}>
+              <p>{t("mainWritwToMe")}</p>
             </Link>
+            <p className={classes.main_feedback__preTitle}>
+              {t("mainPreTitle3")}
+            </p>
+            <h2>{t("mainTitle3")}</h2>
+
+            <div className={classes.main_feedback__text}>
+              <p className={classes.main_feedback__name}>Петр Иванов</p>
+
+              <p>
+                Оторвали Мишке лапу, уронили Мишку на пол. Пришлось везти Мишку
+                в клинику. Там наш доктор ай-Владислав пришил Мишке лапку, да
+                так, что у Мишки улучшилась мелкая моторика, теперь не просто
+                медведь, а еще и помощник по хозяйству! Мы даже не жалеем, что
+                лапу оторвали, в будущем планируем повторить с остальными тремя.
+              </p>
+              <Link to={"/feedback"} className={classes.link}>
+                <p>{t("mainDescription3.readMore")}</p>
+                <Arrow />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,15 @@
+.form_wrapper {
+  margin: 50px 30px;
+  h3 {
+    margin: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin: 20px;
+    }
+  }
+}

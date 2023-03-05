@@ -49,6 +49,11 @@
     "title4": "Veterinarska ambulanta PVU MONTVET",
     "part4": "2022 - present - specialist in surgery, orthopedics, neurology, neurosurgery, traumatology"
   },
+  "feedback": {
+    "title": "Feedback from my patients",
+    "title2": "by the words of their owners",
+    "errorMassege": "No feedback. Become the first!"
+  },
   "contacts": {
     "title": "Contacts",
     "title2": "Adress",

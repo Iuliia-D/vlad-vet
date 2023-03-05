@@ -1,7 +1,7 @@
-import HeaderBlack from "../UI/HeaderBlack";
+import HeaderBlack from "../../UI/HeaderBlack";
 import classes from "./Contacts.module.scss";
-import Form from "../UI/Form";
-import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
+import Form from "./Form";
+import { ReactComponent as Pasient } from "../../../assets/icons/pasient.svg";
 
 const Contacts = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   return (

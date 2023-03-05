@@ -10,6 +10,7 @@ import { ReactComponent as Quote } from "../../assets/icons/quote.svg";
 // import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
 // import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import classes from "./Main.module.scss";
+// import Feedback from "./feedback/Feedback";
 
 const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   const dispatch = useDispatch();
@@ -101,6 +102,7 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
                 медведь, а еще и помощник по хозяйству! Мы даже не жалеем, что
                 лапу оторвали, в будущем планируем повторить с остальными тремя.
               </p>
+
               <Link to={"/feedback"} className={classes.link}>
                 <p>{t("mainDescription3.readMore")}</p>
                 <Arrow />

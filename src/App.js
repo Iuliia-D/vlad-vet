@@ -10,9 +10,11 @@ import Footer from "./components/UI/Footer";
 const About = React.lazy(() => import("./components/pages/About"));
 const CasesList = React.lazy(() => import("./components/pages/CasesList"));
 const FeedbackList = React.lazy(() =>
-  import("./components/pages/FeedbackList")
+  import("./components/pages/feedback/FeedbackList")
 );
-const Contacts = React.lazy(() => import("./components/pages/Contacts"));
+const Contacts = React.lazy(() =>
+  import("./components/pages/contacts/Contacts")
+);
 
 function App() {
   const dispatch = useDispatch();

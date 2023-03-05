@@ -1,10 +1,12 @@
 import { React, useState, useEffect } from "react";
 import { collection, query, onSnapshot } from "firebase/firestore";
-import { db } from "../../firebase";
-import HeaderBlack from "../UI/HeaderBlack";
+import { db } from "../../../firebase";
+import { Link } from "react-router-dom";
+
 import Feedback from "./Feedback";
-import LoadingPage from "./LoadingPage";
+import LoadingPage from "./../LoadingPage";
 import classes from "./FeedbackList.module.scss";
+import FeedbackHeader from "./FeedbackHeader";
 
 const FeedbackList = ({
   t,
@@ -15,6 +17,8 @@ const FeedbackList = ({
   const [feedback, setFeedback] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Получаем отзывы из БД. В зависимости от выбранного языка,
+  // обращаемся к соотвественной коллекции в БД.
   useEffect(() => {
     setIsLoading(true);
     let q;
@@ -46,27 +50,41 @@ const FeedbackList = ({
       </section>
     );
   }
+
+  // Проверяем, что есть доступ к БД и массив с отзывыми приходит.
+  // Иначе показываем сообщение.
   if (feedback.length === 0) {
-    return <h2>Нет записей</h2>;
+    return (
+      <>
+        <FeedbackHeader
+          t={t}
+          changeLanguage={changeLanguage}
+          langMenuActive={langMenuActive}
+          enteredLanguage={enteredLanguage}
+        />
+        <h2 style={{ textAlign: "center", marginTop: "60px" }}>
+          {t("feedback.errorMassege")}
+        </h2>
+        <Link to={"/contacts"}>
+          <p
+            style={{ textAlign: "center", marginTop: "30px", fontSize: "24px" }}
+          >
+            {t("mainWritwToMe")}
+          </p>
+        </Link>
+      </>
+    );
   }
 
+  // Если все ОК, показываем отзывы, сортируем по дате.
   return (
     <>
-      <HeaderBlack
+      <FeedbackHeader
         t={t}
         changeLanguage={changeLanguage}
         langMenuActive={langMenuActive}
         enteredLanguage={enteredLanguage}
       />
-      <div className={classes.feedback_wrapper}>
-        <div className={classes.feedback_containerTitle}>
-          <div className={classes.feedback_title}>
-            <h2>{t("feedback.title")}</h2>
-            <p className={classes.feedback_p}>{t("feedback.title2")}</p>
-          </div>
-          <div className={classes.feedback_photo}></div>
-        </div>
-      </div>
       <div className={classes.feedback_containerFeedback}>
         <ul>
           {feedback
@@ -76,6 +94,11 @@ const FeedbackList = ({
             })}
         </ul>
       </div>
+      <Link to={"/contacts"}>
+        <p style={{ textAlign: "center", marginTop: "30px", fontSize: "24px" }}>
+          {t("mainWritwToMe")}
+        </p>
+      </Link>
     </>
   );
 };

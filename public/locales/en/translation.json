@@ -58,5 +58,20 @@
     "title": "Contacts",
     "title2": "Adress",
     "part1": "Veterinarska ambulanta PVU MONTVET"
+  },
+  "form": {
+    "title": "Write to me",
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Send"
+  },
+  "formSubmit": {
+    "part1": "Invalid Input",
+    "part2": "Please enter a valid name and message",
+    "part3": "Invalid Email",
+    "part4": "Please enter a valid email adress",
+    "part5": "Thank you!",
+    "part6": "Your message has been sent."
   }
 }

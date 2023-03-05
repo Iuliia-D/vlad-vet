@@ -1,15 +1,38 @@
 .form_wrapper {
-  margin: 50px 30px;
+  margin: 30px 0px;
   h3 {
-    margin: 20px;
+    margin: 30px;
+    font-family: var(--font-base);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    // text-align: center;
   }
   form {
     display: flex;
     flex-direction: column;
-
     input,
-    textarea {
-      margin: 20px;
+    textarea,
+    button {
+      color: var(--black-color);
+      font-family: var(--font-base);
+      font-size: var(--font-size-l);
+      background-color: transparent;
+      padding: 30px 30px 30px 30px;
+      border-top: 1px solid black;
+      border-left: none;
+      border-bottom: none;
+      border-right: none;
+      &::placeholder {
+        color: var(--black-color);
+        font-family: var(--font-base);
+        font-size: var(--font-size-l);
+      }
+    }
+
+    button {
+      color: var(--white-color);
+      background-color: var(--black-color);
+      padding-left: -20px;
     }
   }
 }

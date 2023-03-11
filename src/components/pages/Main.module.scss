@@ -74,36 +74,39 @@
 }
 
 // ****************** CASES ***************
-.main_cases {
-  .main_cases__photo {
-    background-image: url("../../assets/img/cat.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-  }
+.main_cases__wrapper {
   background-color: var(--black-color);
-  color: var(--white-text-color);
-  text-align: end;
+  .main_cases {
+    .main_cases__photo {
+      background-image: url("../../assets/img/cat.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 300px;
+    }
 
-  .main_cases__text {
-    padding: 20px;
-  }
-  .main_cases__textSM {
-    font-size: var(--font-size-s);
-    padding: 10px 0 0 0;
-  }
-  h2 {
-    padding: 20px 0;
-    font-size: var(--font-size-m);
-    font-weight: 500;
-  }
-  .link {
-    justify-content: flex-end;
     color: var(--white-text-color);
-    margin: 50px 0;
-    &:visited {
+    text-align: end;
+
+    .main_cases__text {
+      padding: 20px;
+    }
+    .main_cases__textSM {
+      font-size: var(--font-size-s);
+      padding: 10px 0 0 0;
+    }
+    h2 {
+      padding: 20px 0;
+      font-size: var(--font-size-m);
+      font-weight: 500;
+    }
+    .link {
+      justify-content: flex-end;
       color: var(--white-text-color);
+      margin: 50px 0;
+      &:visited {
+        color: var(--white-text-color);
+      }
     }
   }
 }
@@ -157,6 +160,96 @@
 
 // Responsive
 
+// @media (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  // header
+  .main_header {
+    background-image: url("../../assets/img/main-bg-d.png");
+    background-size: cover;
+    .main_header__lang {
+      margin: 15px 15px 0 0;
+    }
+  }
+  // about
+  .main_about {
+    padding: 64px 0 0 0;
+    .main_about__photo {
+      background-size: contain;
+      height: 634px;
+    }
+    .main_about__title {
+      padding: 15px 0px 10px 50px;
+      h2 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+    .main__descrDesktop {
+      display: block;
+      font-size: var(--font-size);
+      margin: 30px 0 0 0;
+    }
+  }
+  .main__descrMobile {
+    display: none;
+  }
+
+  // cases
+  .main_cases__wrapper {
+    .main_cases {
+      .main_cases__photo {
+        background-image: url("../../assets/img/cat-desktop.png");
+        height: 480px;
+      }
+      .main_cases__text {
+        h2 {
+          padding: 30px 0;
+          font-size: var(--font-size-l);
+          font-weight: 500;
+        }
+        .main_cases__number {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  // FEEDBACK
+  .main_feedback__wrapper {
+    // display: flex;
+    // justify-content: center;
+
+    .main_feedback__container {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      // margin: 30px 0 0 0;
+      // max-width: 1920px;
+
+      .main_feedback__photo {
+        background: url("../../assets/img/dog&man-desktop.png") no-repeat right
+          top;
+        background-size: cover;
+        width: 100%;
+        height: 546px;
+        align-self: center;
+        max-width: 855px;
+      }
+      .main_feedback__deskr {
+        margin: 10px 0 0 10px;
+        .main_feedback__number {
+          padding: 30px 0 0 0;
+        }
+        h2 {
+          font-size: var(--font-size-l);
+          line-height: 44px;
+          padding: 40px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 768px) {
 @media (min-width: 1200px) {
   // header
   .main_header {
@@ -192,26 +285,33 @@
   }
 
   // cases
-  .main_cases {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 914px;
-    .main_cases__photo {
-      background-image: url("../../assets/img/cat-desktop.png");
-      width: 55%;
-      height: 711px;
-      margin: 120px 0 120px 20px;
-    }
-    .main_cases__text {
-      width: 404px;
-      margin: 240px 30px 0 20px;
-      h2 {
-        padding: 30px 0;
-        font-size: var(--font-size-l);
-        font-weight: 500;
+  .main_cases__wrapper {
+    // display: flex;
+    // justify-content: center;
+    .main_cases {
+      display: flex;
+      flex-direction: row-reverse;
+
+      height: 914px;
+      // max-width: 1920px;
+      // min-width: 1200px;
+      .main_cases__photo {
+        background-image: url("../../assets/img/cat-desktop.png");
+        width: 55%;
+        height: 711px;
+        margin: 120px 0 120px 20px;
       }
-      .main_cases__number {
-        margin-bottom: 50px;
+      .main_cases__text {
+        width: 404px;
+        margin: 240px 30px 0 20px;
+        h2 {
+          padding: 30px 0;
+          font-size: var(--font-size-l);
+          font-weight: 500;
+        }
+        .main_cases__number {
+          margin-bottom: 50px;
+        }
       }
     }
   }

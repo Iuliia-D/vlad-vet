@@ -62,19 +62,21 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
         </Link>
       </div>
       {/* ****************** CASES *************** */}
-      <div className={classes.main_cases}>
-        <div className={classes.main_cases__photo}></div>
-        <div className={classes.main_cases__text}>
-          {/* <Pasient /> */}
-          <p className={classes.main_cases__number}>01</p>
-          <p className={classes.main_cases__textSM}>{t("mainPreTitle2")}</p>
-          <h2>{t("mainTitle2")}</h2>
-          <p>{t("mainDescription2.part1")}</p>
-          <p>{t("mainDescription2.part2")}</p>
-          <Link to={"/cases"} className={classes.link}>
-            <p>{t("mainDescription2.readMore")}</p>
-            <ArrowWhite />
-          </Link>
+      <div className={classes.main_cases__wrapper}>
+        <div className={classes.main_cases}>
+          <div className={classes.main_cases__photo}></div>
+          <div className={classes.main_cases__text}>
+            {/* <Pasient /> */}
+            <p className={classes.main_cases__number}>01</p>
+            <p className={classes.main_cases__textSM}>{t("mainPreTitle2")}</p>
+            <h2>{t("mainTitle2")}</h2>
+            <p>{t("mainDescription2.part1")}</p>
+            <p>{t("mainDescription2.part2")}</p>
+            <Link to={"/cases"} className={classes.link}>
+              <p>{t("mainDescription2.readMore")}</p>
+              <ArrowWhite />
+            </Link>
+          </div>
         </div>
       </div>
       {/* ****************** FEEDBACK *************** */}

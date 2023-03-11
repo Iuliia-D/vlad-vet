@@ -39,31 +39,26 @@ const Form = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
           form.current,
           process.env.REACT_APP_YOUR_PUBLIC_KEY
         )
-        .then(
-          (result) => {
-            setSuccessMassage({
-              title: t("formSubmit.part5"),
-              message: t("formSubmit.part6"),
-            });
-            console.log(result.text);
-          },
-          (error) => {
-            // setError({
-            //   title: "Error",
-            //   message: "Something went wrong",
-            // });
-            console.log(error.text);
-          }
-        );
-
-      setName("");
-      setEmail("");
-      setMessage("");
-      setError("");
-
-      // console.log(name, email, message);
-      // setError("");
+        .then((result) => {
+          setSuccessMassage({
+            title: t("formSubmit.part5"),
+            message: t("formSubmit.part6"),
+          });
+          console.log(result.text);
+        })
+        .catch((error) => {
+          setError({
+            title: t("formSubmit.errorTitle"),
+            message: t("formSubmit.errorMessage"),
+          });
+          console.log(error.text);
+          console.log(error);
+        });
     }
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   const nameChangeHandler = (e) => {

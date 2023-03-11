@@ -72,6 +72,8 @@
     "part3": "Invalid Email",
     "part4": "Please enter a valid email adress",
     "part5": "Thank you!",
-    "part6": "Your message has been sent."
+    "part6": "Your message has been sent.",
+    "errorTitle": "Something went wrong,",
+    "errorMessage": "Server not responding"
   }
 }

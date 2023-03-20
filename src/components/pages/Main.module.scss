@@ -26,7 +26,7 @@
   flex-direction: row;
   padding-top: 38px;
   .main_about__photo {
-    background-image: url("../../assets/img/main-photo.png");
+    background-image: url("../../assets/img/main-photo-4.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
@@ -117,7 +117,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   // width: 100%;
-  height: 244px;
+  min-height: 350px;
   padding: 20px 30px 0 20px;
 }
 .main_feedback__deskr {
@@ -230,9 +230,9 @@
           top;
         background-size: cover;
         width: 100%;
-        height: 546px;
+        height: 630px;
         align-self: center;
-        max-width: 855px;
+        // max-width: 855px;
       }
       .main_feedback__deskr {
         margin: 10px 0 0 10px;
@@ -294,7 +294,7 @@
 
       height: 914px;
       // max-width: 1920px;
-      // min-width: 1200px;
+      min-width: 1200px;
       .main_cases__photo {
         background-image: url("../../assets/img/cat-desktop.png");
         width: 55%;
@@ -330,11 +330,114 @@
       .main_feedback__photo {
         background: url("../../assets/img/dog&man-desktop.png") no-repeat right
           top;
+
         background-size: cover;
         width: 100%;
         height: 546px;
         align-self: center;
-        max-width: 855px;
+        // max-width: 855px;
+      }
+      .main_feedback__deskr {
+        margin: 10px 0 0 10px;
+        .main_feedback__number {
+          padding: 30px 0 0 0;
+        }
+        h2 {
+          font-size: var(--font-size-l);
+          line-height: 44px;
+          padding: 40px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  // header
+  .main_header {
+    // background: url("../../assets/img/main-bg-d.png") no-repeat center top;
+    // height: 550px;
+    .main_header__lang {
+      margin: 15px 15px 0 0;
+    }
+  }
+  // about
+  .main_about {
+    padding: 64px 0 64px 0;
+    .main_about__photo {
+      width: 476px;
+      height: 634px;
+    }
+    .main_about__title {
+      width: 40%;
+      padding: 30px 100px 10px 100px;
+      h2 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+    .main__descrDesktop {
+      display: block;
+      font-size: var(--font-size);
+      margin: 30px 0 0 0;
+    }
+  }
+  .main__descrMobile {
+    display: none;
+  }
+
+  // cases
+  .main_cases__wrapper {
+    // display: flex;
+    // justify-content: center;
+    .main_cases {
+      display: flex;
+      flex-direction: row-reverse;
+
+      height: 914px;
+      // max-width: 1920px;
+      min-width: 1200px;
+      .main_cases__photo {
+        background-image: url("../../assets/img/cat-desktop.png");
+        width: 55%;
+        height: 711px;
+        margin: 120px 0 120px 20px;
+      }
+      .main_cases__text {
+        width: 404px;
+        margin: 240px 30px 0 20px;
+        h2 {
+          padding: 30px 0;
+          font-size: var(--font-size-l);
+          font-weight: 500;
+        }
+        .main_cases__number {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  // FEEDBACK
+  .main_feedback__wrapper {
+    display: flex;
+    justify-content: center;
+
+    .main_feedback__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 30px 0 0 0;
+      max-width: 1920px;
+
+      .main_feedback__photo {
+        background: url("../../assets/img/dog&man-desktop.png") no-repeat right
+          top;
+
+        background-size: cover;
+        width: 100%;
+        height: 546px;
+        align-self: center;
+        // max-width: 855px;
       }
       .main_feedback__deskr {
         margin: 10px 0 0 10px;

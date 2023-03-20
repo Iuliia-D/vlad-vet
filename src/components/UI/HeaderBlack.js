@@ -1,5 +1,6 @@
 import { menuActions } from "../../store/menuSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import { ReactComponent as MenuBtnBlack } from "../../assets/icons/menu-btn-black.svg";
@@ -31,10 +32,12 @@ const HeaderBlack = ({
       )}
 
       <div className={classes.header_menu}>
-        <div>
-          <PasientBlack />
-          <h1>{t("name")}</h1>
-        </div>
+        <Link to={"/"} className={classes.header_menuLink}>
+          <div>
+            <PasientBlack />
+            <h1>{t("name")}</h1>
+          </div>
+        </Link>
         <button onClick={menuOpenHandler}>
           <MenuBtnBlack />
         </button>

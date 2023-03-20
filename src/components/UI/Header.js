@@ -30,6 +30,7 @@ const Header = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
           <Pasient />
           <h1>{t("name")}</h1>
         </div>
+
         <button onClick={menuOpenHandler}>
           <MenuBtn />
         </button>

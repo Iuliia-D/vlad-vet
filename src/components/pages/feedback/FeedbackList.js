@@ -95,9 +95,7 @@ const FeedbackList = ({
         </ul>
       </div>
       <Link to={"/contacts"}>
-        <p style={{ textAlign: "center", marginTop: "30px", fontSize: "24px" }}>
-          {t("mainWritwToMe")}
-        </p>
+        <p className={classes.feedback_link}>{t("mainWritwToMe")}</p>
       </Link>
     </>
   );

@@ -18,15 +18,24 @@ const Contacts = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
             <Pasient className={classes.contacts_icon} />
             <div className={classes.contacts_text}>
               <h1>{t("contacts.title")}</h1>
-              <a href="https://vk.com/justlvet">VK</a>
-              <a href="https://instagram.com/justlvet?igshid=Zjc2ZTc4Nzk=">
+              <a href="https://vk.com/justlvet" target="blank">
+                VK
+              </a>
+              <a
+                href="https://instagram.com/justlvet?igshid=Zjc2ZTc4Nzk="
+                target="blank"
+              >
                 Instagram
               </a>
-              <a href="https://t.me/JustlVet">Telegram</a>
-              <a href="https://wa.me/79118206707">WhatsApp</a>
+              <a href="https://t.me/JustlVet" target="blank">
+                Telegram
+              </a>
+              <a href="https://wa.me/79118206707" target="blank">
+                WhatsApp
+              </a>
               <h1>{t("contacts.title2")}</h1>
               <p>{t("contacts.part1")}</p>
-              <a href="https://goo.gl/maps/MAsK7MAD6W15fSwQ9">
+              <a href="https://goo.gl/maps/MAsK7MAD6W15fSwQ9" target="blank">
                 22 Ilije Plamenca, Podgorica, Montenegro
               </a>
             </div>

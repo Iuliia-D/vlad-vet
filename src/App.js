@@ -9,8 +9,12 @@ import Footer from "./components/UI/Footer";
 
 const About = React.lazy(() => import("./components/pages/About"));
 const CasesList = React.lazy(() => import("./components/pages/CasesList"));
-const Publication = React.lazy(() => import("./components/pages/Publication"));
-const Contacts = React.lazy(() => import("./components/pages/Contacts"));
+const FeedbackList = React.lazy(() =>
+  import("./components/pages/feedback/FeedbackList")
+);
+const Contacts = React.lazy(() =>
+  import("./components/pages/contacts/Contacts")
+);
 
 function App() {
   const dispatch = useDispatch();
@@ -61,9 +65,9 @@ function App() {
           }
         />
         <Route
-          path="publication"
+          path="feedback"
           element={
-            <Publication
+            <FeedbackList
               t={t}
               changeLanguage={changeLanguage}
               langMenuActive={langMenuActive}

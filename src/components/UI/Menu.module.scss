@@ -10,9 +10,9 @@
 
 .menu_header {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 91% auto;
   padding: 25px 12px 30px 12px;
-  border-bottom: 1px solid var(--black-color);
+  // border-bottom: 1px solid var(--black-color);
   div {
     display: flex;
     flex-direction: row;
@@ -27,46 +27,81 @@
 }
 
 .menu_list {
-  li .link {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid var(--black-color);
-    padding: 30px;
-    font-size: var(--font-size-s);
-    text-decoration: none;
-    color: var(--black-color);
-    transition: opacity ease-in-out 1s;
-    &:visited {
-      color: var(--black-color);
+  li {
+    list-style-type: none;
+    &:last-child {
+      border-bottom: 1px solid var(--black-color);
     }
-    p:last-child {
-      margin-left: 5px;
-      font-size: var(--font-size-m);
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      border-top: 1px solid var(--black-color);
+      padding: 30px;
+      font-size: var(--font-size-s);
+      text-decoration: none;
+
+      color: var(--black-color);
+      transition: opacity ease-in-out 1s;
+      &:visited {
+        color: var(--black-color);
+      }
+      p:last-child {
+        margin-left: 5px;
+        font-size: var(--font-size-m);
+      }
+      // &:last-child {
+      //   border-bottom: 1px solid var(--black-color);
+      // }
     }
   }
 }
 
 .menu_lang {
-  padding: 30px;
+  padding: 15px;
   display: flex;
   justify-content: flex-end;
-  font-size: var(--font-size-m);
   button {
+    text-align: center;
+    font-family: var(--font-base);
     font-size: var(--font-size-m);
+    text-decoration: none;
+    color: var(--black-color);
     &:visited {
       color: var(--black-color);
     }
   }
 }
 
-.menu_lang {
-  button {
-    text-align: center;
-    font-size: var(--font-size);
-    text-decoration: none;
-    color: var(--black-color);
-    &:visited {
-      color: var(--black-color);
+// Responsive
+
+@media (min-width: 1200px) {
+  .menu_wrapper {
+    padding: 16px 10px 30px 25px;
+    .menu_list {
+      margin: 0 0 0 680px;
+
+      li {
+        font-weight: 500;
+        font-size: 64px;
+
+        .link {
+          padding-left: 150px;
+          span {
+            margin: -5px 5px 0 0;
+          }
+          p {
+            font-size: var(--font-size-l);
+          }
+          &:hover {
+            backdrop-filter: blur(5px);
+          }
+        }
+      }
     }
+  }
+  .menu_header {
+    display: grid;
+    grid-template-columns: 94% auto;
   }
 }

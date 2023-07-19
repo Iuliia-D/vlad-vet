@@ -34,3 +34,26 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .cases_wrapper {
+    h2 {
+      padding: 70px 10px 20px 30px;
+      font-size: var(--font-size-l);
+    }
+    margin: 0 0 150px 0;
+    h3 {
+      margin: 70px 10px -60px 10px;
+    }
+  }
+  .case {
+    article {
+      padding: 50px;
+    }
+    .link_container {
+      margin: 30px 0 30px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,18 +1,28 @@
 .lang_wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--black-color);
-  height: 75%;
+  justify-content: end;
+  margin: 0 0 20px 0;
 
   button {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid white;
     padding: 15px;
     color: var(--white-text-color);
+    font-family: var(--font-base);
     font-size: var(--font-size-m);
   }
-  button:first-child {
-    margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .lang_wrapper {
+    button {
+      margin: 0 0 0 50%;
+      &:hover {
+        backdrop-filter: blur(10px);
+      }
+    }
   }
 }

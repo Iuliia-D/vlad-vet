@@ -5,7 +5,7 @@
     "main": "Main page",
     "about": "About me",
     "cases": "Clinical cases",
-    "publication": "Publication",
+    "feedback": "Feedback",
     "contacts": "Contacts"
   },
   "mainTitle": "Veterinary surgeon, orthopedist, traumatologist, neurosurgeon, candidate of veterinary sciences",
@@ -23,14 +23,13 @@
     "part2": "It is worth emphasizing that each case is individual, the course of the disease and the methods of treatment will differ, even with a similar diagnosis. I always approach the diagnosis and treatment of the patient based on his characteristics and focus on the circumstances.",
     "readMore": "Read more"
   },
-  "mainPreTitle3": "Scientific activity",
-  "mainTitle3": "Publications and further education",
+  "mainWritwToMe": "Write to me",
+  "mainPreTitle3": "You can give feedback or ask me a question.",
+  "mainTitle3": "Feedback from patients by the words of their owners",
   "mainDescription3": {
-    "part1": "A distinctive feature of a professional is the continuous development of his skills.",
-    "part2": "In addition to practical activities, I spend time attending conferences, seminars and writing publications about my work.",
-    "readMore": "Read more"
+    "readMore": "Read all feedback",
+    "footerSocial": "Find Me Online"
   },
-  "footerSocial": "Find Me Online",
 
   "aboutTitle": "Education",
   "aboutDescription": {
@@ -50,9 +49,40 @@
     "title4": "Veterinarska ambulanta PVU MONTVET",
     "part4": "2022 - present - specialist in surgery, orthopedics, neurology, neurosurgery, traumatology"
   },
+  "feedback": {
+    "title": "Feedback from my patients",
+    "title2": "by the words of their owners",
+    "errorMassege": "No feedback. Become the first!"
+  },
   "contacts": {
     "title": "Contacts",
     "title2": "Adress",
     "part1": "Veterinarska ambulanta PVU MONTVET"
+  },
+  "recomendation": {
+    "title": "Take care of your pets' health: signs of illness you need to know:",
+    "li1": "Less active behavior",
+    "li2": "Lack of appetite",
+    "li3": "Breathing problems",
+    "li4": "Frequent or infrequent urination",
+    "li5": "Unusual behavior, such as aggression or unusual sounds and movements",
+    "descr": "If you notice any of these symptoms in your pet, do not delay visiting a veterinarian. Early consultation with a specialist can help prevent serious complications and preserve your pet's health."
+  },
+  "form": {
+    "title": "Write to me",
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Send"
+  },
+  "formSubmit": {
+    "part1": "Invalid Input",
+    "part2": "Please enter a valid name and message",
+    "part3": "Invalid Email",
+    "part4": "Please enter a valid email adress",
+    "part5": "Thank you!",
+    "part6": "Your message has been sent.",
+    "errorTitle": "Something went wrong,",
+    "errorMessage": "Server not responding"
   }
 }

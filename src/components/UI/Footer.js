@@ -13,7 +13,7 @@ const Footer = ({ t }) => {
       <a href="https://t.me/JustlVet" target="blank">
         Telegram
       </a>
-      <p>@ 2022 - VLADISLAV BOCHKAREV </p>
+      <p>@ 2023 - VLADISLAV BOCHKAREV </p>
     </div>
   );
 };

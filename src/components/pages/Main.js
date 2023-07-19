@@ -11,6 +11,7 @@ import { ReactComponent as Quote } from "../../assets/icons/quote.svg";
 // import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
 import classes from "./Main.module.scss";
 // import Feedback from "./feedback/Feedback";
+import Contacts from "./contacts/Contacts";
 
 const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   const dispatch = useDispatch();
@@ -86,15 +87,27 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
 
           <div className={classes.main_feedback__deskr}>
             <p className={classes.main_feedback__number}>02</p>
-            <Link to={"/contacts"} className={classes.link_contacts}>
+            {/* <Link to={"/contacts"} className={classes.link_contacts}>
               <p>{t("mainWritwToMe")}</p>
-            </Link>
+            </Link> */}
             <p className={classes.main_feedback__preTitle}>
               {t("mainPreTitle3")}
             </p>
-            <h2>{t("mainTitle3")}</h2>
+            {/* <h2>{t("mainTitle3")}</h2> */}
+            <h2>{t("recomendation.title")}</h2>
+            <ol>
+              <li>{t("recomendation.li1")}</li>
+              <li>{t("recomendation.li2")}</li>
+              <li>{t("recomendation.li3")}</li>
+              <li>{t("recomendation.li4")}</li>
+              <li>{t("recomendation.li5")}</li>
+            </ol>
+            <p>{t("recomendation.descr")}</p>
+            <Link to={"/contacts"} className={classes.link_contacts}>
+              <p>{t("mainWritwToMe")}</p>
+            </Link>
 
-            <div className={classes.main_feedback__text}>
+            {/* <div className={classes.main_feedback__text}>
               <p className={classes.main_feedback__name}>Петр Иванов</p>
 
               <p>
@@ -109,10 +122,11 @@ const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
                 <p>{t("mainDescription3.readMore")}</p>
                 <Arrow />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
+      {/* <Contacts t={t} /> */}
     </>
   );
 };

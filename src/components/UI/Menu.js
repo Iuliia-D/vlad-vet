@@ -66,7 +66,7 @@ const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
               <p>{t("menu.cases")}</p>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to={"/feedback"}
               onClick={menuCloseHandler}
@@ -75,14 +75,14 @@ const Menu = ({ t, changeLanguage, enteredLanguage, langMenuActive }) => {
               <span>(3)</span>
               <p>{t("menu.feedback")}</p>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to={"/contacts"}
               onClick={menuCloseHandler}
               className={classes.link}
             >
-              <span>(4)</span>
+              <span>(3)</span>
               <p>{t("menu.contacts")}</p>
             </Link>
           </li>

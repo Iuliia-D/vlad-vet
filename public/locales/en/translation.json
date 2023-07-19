@@ -59,6 +59,15 @@
     "title2": "Adress",
     "part1": "Veterinarska ambulanta PVU MONTVET"
   },
+  "recomendation": {
+    "title": "Take care of your pets' health: signs of illness you need to know:",
+    "li1": "Less active behavior",
+    "li2": "Lack of appetite",
+    "li3": "Breathing problems",
+    "li4": "Frequent or infrequent urination",
+    "li5": "Unusual behavior, such as aggression or unusual sounds and movements",
+    "descr": "If you notice any of these symptoms in your pet, do not delay visiting a veterinarian. Early consultation with a specialist can help prevent serious complications and preserve your pet's health."
+  },
   "form": {
     "title": "Write to me",
     "name": "Name",

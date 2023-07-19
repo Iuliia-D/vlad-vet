@@ -34,7 +34,7 @@ const LanguageChoise = ({ changeLanguage }) => {
           <p>English ({languages[1]})</p>
           {enteredLanguage === languages[1] ? <ExpandMore /> : ""}
         </button>
-        <button
+        {/* <button
           onClick={() => {
             changeLanguage(languages[2]);
             langMenuCloseHandler();
@@ -42,7 +42,7 @@ const LanguageChoise = ({ changeLanguage }) => {
         >
           <p>Српски ({languages[2]})</p>
           {enteredLanguage === languages[2] ? <ExpandMore /> : ""}
-        </button>
+        </button> */}
       </div>
     </>
   );

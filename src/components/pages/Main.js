@@ -6,12 +6,9 @@ import LanguageChoise from "../UI/LanguageChoise";
 import { ReactComponent as ExpandMore } from "../../assets/icons/expand_more_white.svg";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow-black.svg";
 import { ReactComponent as ArrowWhite } from "../../assets/icons/arrow-white.svg";
-import { ReactComponent as Quote } from "../../assets/icons/quote.svg";
-// import { ReactComponent as Pasient } from "../../assets/icons/pasient.svg";
-// import { ReactComponent as PasientBlack } from "../../assets/icons/pasient-black.svg";
+// import { ReactComponent as Quote } from "../../assets/icons/quote.svg";
 import classes from "./Main.module.scss";
 // import Feedback from "./feedback/Feedback";
-import Contacts from "./contacts/Contacts";
 
 const Main = ({ t, changeLanguage, langMenuActive, enteredLanguage }) => {
   const dispatch = useDispatch();

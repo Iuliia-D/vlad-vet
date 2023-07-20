@@ -41,8 +41,28 @@ const Slider = ({ c }) => {
     setSlideIndex(index);
   };
 
+  const [touchStart, setTouchStart] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchEnd = e.targetTouches[0].clientX;
+    if (touchStart - touchEnd > 150) {
+      nextSlide();
+    }
+    if (touchStart - touchEnd < -150) {
+      prevSlide();
+    }
+  };
+
   return (
-    <div className="container-slider">
+    <div
+      className="container-slider"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
       {imageList.map((url, index) => {
         return (
           <div

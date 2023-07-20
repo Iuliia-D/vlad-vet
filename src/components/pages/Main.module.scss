@@ -368,6 +368,7 @@
   // about
   .main_about {
     padding: 64px 0 64px 0;
+    justify-content: center;
     .main_about__photo {
       width: 476px;
       height: 634px;
@@ -403,9 +404,9 @@
       min-width: 1200px;
       .main_cases__photo {
         background-image: url("../../assets/img/cat-desktop.png");
-        width: 55%;
+        width: 30%;
         height: 711px;
-        margin: 120px 0 120px 20px;
+        margin: 120px 20% 120px 20px;
       }
       .main_cases__text {
         width: 404px;
@@ -434,8 +435,7 @@
       max-width: 1920px;
 
       .main_feedback__photo {
-        background: url("../../assets/img/dog&man-desktop.png") no-repeat right
-          top;
+        background: url("../../assets/img/dog&man-desktop.png") no-repeat center;
 
         background-size: cover;
         width: 100%;
@@ -457,3 +457,9 @@
     }
   }
 }
+
+// @media (min-width: 1600px) {
+//   .main_about {
+
+//   }
+// }
